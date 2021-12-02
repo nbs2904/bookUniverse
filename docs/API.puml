@@ -1,0 +1,122 @@
+@startuml API
+!define primary_key(name) <b>PK</b> <u>name</u>
+!define primary_key(name, type) <b>PK</b> <u>name</u>:type
+!define secondary_key(name) <b>SK</b> name
+!define secondary_key(name, type) <b>SK</b> name:type
+!define attribute(name) name
+!define attribute(name, type) name:type
+!define relation(pk, sk, pkValue, skValue) pk "pkValue" -- "skValue" sk
+
+entity user{
+    primary_key(userID, int)
+    --
+    e-mail:string
+    --
+    pswd:string
+    --
+    userName:string
+    --
+    dateOfBirth:date
+    --
+    secondary_key(paymentMethodID, int)
+    --
+    country:string
+    --
+    secondary_key(aboModelID, int)
+}
+
+entity userGenre{
+    primary_key(genreID, int)
+    --
+    secondary_key(userID, int)
+    --
+    secondary_key(genreID, int)
+}
+
+entity genre{
+    primary_key(genreID, int)
+    --
+    attribute(name, string)
+}
+
+entity books{
+    primary_key(bookID, int)
+    --
+    attribute(titel, string)
+    --
+    attribute(subtitel, string)
+    --
+    attribute(pageCount, int)
+    --
+    attribute(ISBN13, string)
+    --
+    attribute(coverUrl, string)
+    --
+    attribute(language, string)
+    --
+    attribute(description, string)
+}
+
+entity bookGenre{
+    primary_key(bookGenreID, int)
+    --
+    secondary_key(bookID, string)
+    --
+    secondary_key(genreID, string)
+}
+' Autor direkt als Attribut in books speichern
+entity author {
+    primary_key(authorID, int)
+    --
+    attribute(name, string)
+}
+    
+entity borrowed {
+    primary_key(borrowedID, int)
+    --
+    secondary_key(bookID, int)
+    --
+    secondary_key(userID, int)
+    --
+    attribute(starteDate, dateTime)
+    --
+    attribute(endDate, dateTime)
+}
+
+entity bookAuthor{
+    primary_key(bookAuthorID, int)
+    --
+    authorID:int
+    --
+    bookID:int
+}
+
+entity paymentMethod {
+    primary_key(paymentMethodID, int)
+    --
+    attribute(name, string)
+}
+
+entity aboModel {
+    primary_key(aboModelID, int)
+    --
+    attribute(name, string)
+}
+
+
+relation(user::userID, userGenre::userID, "1", "n")
+relation(genre::genreID, userGenre::genreID, "1", "n")
+
+relation(books::bookID, bookGenre::bookID, "1", "n")
+relation(genre::genreID, bookGenre::genreID, "1", "n")
+
+relation(books::bookID, borrowed::bookID, "1", "n")
+relation(user::userID, borrowed::userID, "1", "n")
+
+relation(books::bookID, bookAuthor::bookID, "1", "n")
+relation(author::authorID, bookAuthor::authorID, "1", "n")
+
+relation(paymentMethod::paymentMethodID, user::paymentMethod, "1", "n")
+
+relation(aboModel::aboModelID, user::aboModelID, "1", "n")
+@enduml

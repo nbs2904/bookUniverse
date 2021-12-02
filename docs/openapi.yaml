@@ -1,0 +1,613 @@
+openapi: 3.0.0
+servers:
+    # Added by API Auto Mocking Plugin
+    - description: SwaggerHub API Auto Mocking
+      url: https://virtserver.swaggerhub.com/WebEngineering2/bookUniverse/1.0.0
+info:
+    description: WebEngineering2 Project - booksUniverse
+    version: "1.0.0"
+    title: booksUniverse
+    contact:
+        email: inf20109@lehre.dhbw-stuttgart.de
+    license:
+        name: Apache 2.0
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+tags:
+    - name: user
+      description: User Operations
+    - name: book
+      description: Book Operations
+paths:
+    /user:
+      get:
+        tags:
+          - user
+        summary: gets user information
+        parameters:
+          - in: header
+            name: userName
+            required: true
+            schema:
+              type: string
+          - in: header
+            name: pswd
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: user was found
+            content:
+              application/json:
+                schema:
+                  type: object
+                  $ref: "#/components/schemas/user"
+          "400":
+            description: Bad Request
+          "404":
+            description: user was not found
+      post:
+        tags:
+          - user
+        summary: updates user information
+        parameters:
+          - in: header   
+            name: userName
+            required: true
+            schema:
+              type: string
+          - in: header
+            name: email
+            required: true
+            schema:
+              type: string
+              format: email
+          - in: header
+            name: dateOfBirth
+            required: true
+            schema:
+              type: string
+              format: date
+          - in: header
+            name: country
+            required: true
+            schema:
+              type: string
+          - in: header
+            name: paymentmethodID
+            required: true
+            schema:
+              type: integer
+          - in: header
+            name: subModelID
+            required: true
+            schema:
+              type: integer
+          - in: header
+            name: pswd
+            required: true
+            schema:
+              type: string
+              format: password
+        responses:
+            '200':
+                description: OK
+                content:
+                  application/json:
+                    schema:
+                      type: object
+                      $ref: "#/components/schemas/user"
+            "400":
+              description: Bad Request
+            "404":
+              description: User not found
+          
+    /user/{userID}:
+      delete:
+        tags:
+          - user
+        summary: delete user
+        parameters:
+          - in: query
+            name: userID
+            required: true
+            schema:
+                type: string
+        responses:
+            "200":
+                description: user was deleted
+            "400":
+              description: Bad Request
+            "404":
+                description: user was not found
+      put:
+        tags:
+          - user
+        summary: updates user information
+        parameters:
+          - in: header   
+            name: userID
+            required: true
+            schema:
+              type: integer
+          - in: header   
+            name: userName
+            required: false
+            schema:
+              type: string
+          - in: header
+            name: email
+            required: false
+            schema:
+              type: string
+              format: email
+          - in: header
+            name: dateOfBirth
+            required: false
+            schema:
+              type: string
+              format: date
+          - in: header
+            name: country
+            required: false
+            schema:
+              type: string
+          - in: header
+            name: paymentmethodID
+            required: false
+            schema:
+              type: integer
+          - in: header
+            name: subModelID
+            required: false
+            schema:
+              type: integer
+          - in: header
+            name: pswd
+            required: false
+            schema:
+              type: string
+              format: password
+        responses:
+            '200':
+                description: OK
+                content:
+                  application/json:
+                    schema:
+                      type: object
+                      $ref: "#/components/schemas/user"
+            "400":
+              description: Bad Request
+            "404":
+              description: User not found
+    /user/{userID}/library:
+      get:
+        tags:
+          - user
+        summary: shows list of currently borrowed books
+        parameters:
+          - in: path
+            name: userID
+            required: true
+            schema:
+              type: integer
+        responses:
+          "200":
+            description: user was found
+            content:
+              application/json:
+                schema:
+                  type: array
+                  $ref: "#/components/schemas/bookList"
+          "400":
+            description: Bad Request
+          "404":
+            description: user was not found
+    /user/{userID}/library/{bookID}:
+      get:
+        tags:
+          - user
+        summary: shows information of selected borrowed book
+        parameters:
+          - in: path
+            name: userID
+            required: true
+            schema:
+              type: integer
+          - in: path
+            name: bookID
+            required: true
+            schema:
+              type: integer
+        responses:
+          "200":
+            description: borrowed book was found
+            content:
+              application/json:
+                schema:
+                  type: object
+                  $ref: "#/components/schemas/book"
+          "400":
+            description: Bad Request
+          "404":
+            description: borrowed book was not found
+      post:
+        tags:
+          - user
+        summary: creates entry to borrow book
+        parameters:
+          - in: path
+            name: userID
+            required: true
+            schema:
+              type: integer
+          - in: path
+            name: bookID
+            required: true
+            schema:
+              type: integer
+        responses:
+          "200":
+            description: borrowed book was found
+          "400":
+            description: Bad Request
+          "404":
+            description: borrowed book was not found
+    /user/{userID}/genre:
+      get:
+        tags:
+          - user
+        summary: gets list of user interest in genres
+        parameters:
+          - in: path
+            name: userID
+            required: true
+            schema:
+              type: integer
+        responses:
+          "200":
+            description: user was found
+            content:
+              application/json:
+                schema:
+                  type: array
+                  $ref: "#/components/schemas/genreList"
+          "400":
+            description: Bad Request
+          "404":
+            description: user was not found
+    /user/{userID}/genre/{genreID}:
+      get:
+        tags:
+          - user
+        summary: shows specific genre user is interested in
+        parameters:
+          - in: path
+            name: userID
+            required: true
+            schema:
+              type: integer
+          - in: path
+            name: genreID
+            required: true
+            schema:
+              type: integer
+        responses:
+          "200":
+            description: genre was found
+            content:
+              application/json:
+                schema:
+                  type: object
+                  $ref: "#/components/schemas/genre"
+          "400":
+            description: Bad Request
+          "404":
+            description: borrowed book was not found
+      post:
+        tags:
+          - user
+        summary: creates new interest for user in specific genre
+        parameters:
+          - in: path
+            name: userID
+            required: true
+            schema:
+              type: integer
+          - in: path
+            name: genreID
+            required: true
+            schema:
+              type: integer
+        responses:
+          "200":
+            description: borrowed book was found
+          "400":
+            description: Bad Request
+          "404":
+            description: borrowed book was not found
+      delete:
+        tags:
+          - user
+        summary: deletes user interest in genre
+        parameters:
+          - in: path
+            name: userID
+            required: true
+            schema:
+              type: integer
+          - in: path
+            name: genreID
+            required: true
+            schema:
+              type: integer
+        responses:
+          "200":
+            description: user interest was deleted
+          "400":
+            description: Bad Request
+          "404":
+            description: user interest was not found
+    /book:
+      get:
+        tags:
+          - book
+        summary: get list of all books
+        responses:
+          "200":
+            description: request was successful
+            content:
+              application/json:
+                schema:
+                  type: array
+                  $ref: "#/components/schemas/bookList"
+    /book/{bookID}:
+        get:
+          tags:
+            - book
+          summary: gets book information
+          parameters:
+            - in: path
+              name: bookID
+              required: true
+              schema:
+                  type: integer
+          responses:
+              "200":
+                  description: book was found
+                  content:
+                    application/json:
+                      schema:
+                          type: object  
+                          $ref: "#/components/schemas/book"                    
+              "404":
+                  description: book was not found
+    /paymentMethod:
+        get:
+          tags:
+            - paymentmethod
+          summary: gets list of payment methods
+          responses:
+              "200":
+                  description: Request was successful
+                  content:
+                    application/json:
+                      schema:
+                          type: array
+                          $ref: "#/components/schemas/paymentMethodList"
+    /subModel:
+        get:
+          tags:
+            - subModel
+          summary: gets list of subscription models
+          responses:
+              "200":
+                  description: Request was successful
+                  content:
+                    application/json:
+                      schema:
+                          type: array
+                          $ref: "#/components/schemas/subModelList"
+    /genre:
+        get:
+          tags:
+            - genre
+          summary: gets list of genres
+          responses:
+              "200":
+                  description: Request was successful
+                  content:
+                    application/json:
+                      schema:
+                          type: array
+                          $ref: "#/components/schemas/genreList"
+components:
+    schemas:
+        user:
+          type: object
+          required:
+            - id
+            - name
+            - email
+            - pswd
+            - userName
+            - dateOfBirth
+            - paymentmethodID
+            - country
+            - subModelID
+          properties:
+            id:
+              type: integer
+              example: 85469
+            name:
+              type: string
+              example: "Max Mustermann"
+            email:
+              type: string
+              format: email
+              example: "max@mustermann@gmx.de"
+            pswd:
+              type: string
+              format: password
+              example: acd62bb6efabc81a
+            userName:
+              type: string
+              example: max_89
+            dateOfBirth:
+              type: string
+              format: date
+              example: "1989-11-11"
+            paymentMethodID:
+              type: integer
+              example: 26475
+            country:
+              type: string
+              example: "DE"
+            subModelID:
+              type: integer
+              example: 47586
+        book:
+          type: object
+          required:
+            - id
+            - titel
+            - ISBN13
+            - author
+            - content
+          properties:
+            id:
+              type: integer
+              example: 59586
+            titel:
+              type: string
+              example: "Harry Potter"
+            subtitel:
+              type: string
+              example: "Der Stein der Weisen"
+            pageCount:
+              type: integer
+              example: 235
+            ISBN13:
+              type: integer          
+              example: 7898159198542
+            coverUrl:
+              type: string
+              example: "http://books.google.com/books/content?id=XvApAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+            language:
+              type: string
+              example: "english"
+            description:
+              type: string
+              example: "Eigentlich hatte Harry geglaubt, er sei ein ganz normaler Junge. Zumindest bis zu seinem elften Geburtstag. Da erfährt er, dass er sich an der Schule für Hexerei und Zauberei einfinden soll. Und warum? Weil Harry ein Zauberer ist. Und so wird für Harry das erste Jahr in der Schule das spannendste, aufregendste und lustigste in seinem Leben. Er stürzt von einem Abenteuer in die nächste ungeheuerliche Geschichte, muss gegen Bestien, Mitschüler und Fabelwesen kämpfen. Da ist es gut, dass er schon Freunde gefunden hat, die ihm im Kampf gegen die dunklen Mächte zur Seite stehen."
+            author:
+              type: array
+              $ref: "#/components/schemas/author"
+            content:
+              type: string
+              example: "Contains the entire content/text of the book."
+        bookList:
+          type: array
+          items:
+            $ref: "#/components/schemas/book"
+            example:
+              Example1:
+                $ref: "#/components/schemas/book"
+
+        author:
+          type: object
+          required:
+            - authorID
+            - name
+          properties:
+            authorID:
+              type: integer
+              example: 13451
+            name:
+              type: string
+              example: "J.K. Rowling"
+
+        genre:
+          type: object
+          required:
+            - genreID
+            - name
+          properties:
+            genreID:
+              type: integer
+              example: 19823
+            name:
+              type: string
+              example: "fantasy"
+        genreList:
+          type: array
+          items:
+            $ref: "#/components/schemas/genre"
+            example:
+              Example1:
+                $ref: "#/components/schemas/genre"
+
+              
+        subModel:
+          type: object
+          required:
+            - subModelID
+            - name
+          properties:
+            subModelID:
+              type: integer
+              example: 98231
+            name:
+              type: string
+              example: "premium"
+
+        subModelList:
+          type: array
+          items:
+            $ref: "#/components/schemas/subModel"
+            example:
+              Example1:
+                $ref: "#/components/schemas/subModel"
+
+
+        paymentMethod:
+          type: object
+          required:
+            - paymentMethodID
+            - name
+          properties:
+            paymentMethodID:
+              type: integer
+              example: 12345
+            name:
+              type: string
+              example: "credit card"
+        paymentMethodList:
+          type: array
+          items:
+            $ref: "#/components/schemas/paymentMethod"
+            example:
+              Example1:
+                $ref: "#/components/schemas/paymentMethod"
+            
+        borrowed:
+          required:
+            - id
+            - bookID
+            - userID
+            - startDate
+            - endDate
+          properties:
+            id:
+              type: integer
+            bookID:
+              type: integer
+            userID:
+              type: integer
+            startDate:
+              type: string
+              format: date
+              example: "2021-12-01"
+            endDate:
+              type: string
+              format: date
+              example: "2021-12-31"
