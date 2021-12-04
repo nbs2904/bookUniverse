@@ -6,6 +6,7 @@ const { logger } = require("../../config/logger");
 
 const Genre = require(reqPath);
 
+// TODO JsDoc
 exports.create = (req, res) => {
     // validate request
     if(!req.body?.name){
@@ -26,7 +27,7 @@ exports.create = (req, res) => {
             res.status(201).send(data);
         })
         .catch((err) => {
-            logger.error("Some error occurred while creating the Genre.");
+            logger.error("Some error occurred while creating the Genre:", err);
             res.status(500).send({
                 message: err.message || "Some error occurred while creating the Genre."
             });
@@ -36,7 +37,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
     Genre.find({}, (err, genres) => {
         if(err){
-            logger.error("Some error occurred while getting all Genres.");
+            logger.error("Some error occurred while getting all Genres:", err);
             res.status(500).send({
                 message: err.message || "Some error occured while getting all genres."
             });

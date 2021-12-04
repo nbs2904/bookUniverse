@@ -10,9 +10,7 @@ db.mongoose = mongoose;
 db.url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PSWD}@bookuniverse.3i3gd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 // models
-db.author = require("./models/author.model");
 db.book = require("./models/book.model");
-db.bookAuthor = require("./models/bookAuthor.model");
 db.bookGenre = require("./models/bookGenre.model");
 db.borrowed = require("./models/borrowed.model");
 db.genre = require("./models/genre.model");
@@ -24,8 +22,7 @@ db.userGenre = require("./models/userGenre.model");
 db.mongoose.connect(db.url).then(() => {
     logger.info("Connected to database.");
 }).catch((err) => {
-    logger.error("Cannot connect to database:");
-    logger.error(err);
+    logger.error("Cannot connect to database:", err);
     
     process.exit();
 });

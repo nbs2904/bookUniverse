@@ -2,20 +2,20 @@ const log4js = require("log4js");
 
 log4js.configure({
     appenders: { 
-        mainLogger: { 
+        Backend: { 
             type: "console",
             layout: {
                 type: "pattern",
-                pattern: "%[[%d{dd.MM.yyyy dd-hh:mm:ss}]%] [%[%p]%] - %m"
+                pattern: "\u001b[38;5;245m[%d{dd.MM.yyyy hh:mm:ss}]\u001b[0m %[[%p]%] - %m"
             }
         } 
     },
     categories: { 
         default: { 
-            appenders: [ "mainLogger" ], 
+            appenders: [ "Backend" ], 
             level: "DEBUG" 
         } 
     }
 });
 
-module.exports.logger = log4js.getLogger("mainLogger");
+module.exports.logger = log4js.getLogger("Backend");

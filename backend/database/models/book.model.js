@@ -3,11 +3,11 @@ const { Schema } = mongoose;
 
 
 const bookSchema = new Schema({
-    titel: {
+    title: {
         type: String,
         required: [true, "Title must not be empty"],
     },
-    subtitel: String,
+    subtitle: String,
     pageCount: Number,
     ISBN13: {
         type:  Number,

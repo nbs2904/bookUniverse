@@ -470,7 +470,7 @@ components:
           type: object
           required:
             - id
-            - titel
+            - title
             - ISBN13
             - author
             - content
@@ -478,10 +478,10 @@ components:
             id:
               type: integer
               example: 59586
-            titel:
+            title:
               type: string
               example: "Harry Potter"
-            subtitel:
+            subtitle:
               type: string
               example: "Der Stein der Weisen"
             pageCount:
@@ -596,6 +596,7 @@ components:
             - userID
             - startDate
             - endDate
+            - progress
           properties:
             id:
               type: integer
@@ -611,3 +612,6 @@ components:
               type: string
               format: date
               example: "2021-12-31"
+            progress:
+              type: number
+              example: 12.5

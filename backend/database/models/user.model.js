@@ -3,6 +3,11 @@ const { Schema } = mongoose;
 const {ObjectId} = Schema.Types;
 
 const userSchema = new Schema({
+    name: {
+        type: String,
+        required: [true, "Name must not be empty."],
+        minlength: [2, "Name must be longer than 2 character"]
+    },
     userName: {
         type: String,
         required: [true, "Username must not be empty."],
@@ -14,7 +19,7 @@ const userSchema = new Schema({
     },
     pswd: {
         type: String,
-        required: [true, "Password must be longer than 4 character"]
+        required: [true, "Password is required."]
     },
     dateOfBirth: {
         type: Date,

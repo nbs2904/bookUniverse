@@ -19,6 +19,10 @@ const borrowedSchema = new Schema({
     endDate: {
         type: Date,
         required: [true, "Start date must not be empty."]
+    },
+    progress: {
+        type: Number,
+        required: [true, "Progress must not be emty."]
     }
 });
 

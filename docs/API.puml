@@ -42,9 +42,9 @@ entity genre{
 entity books{
     primary_key(bookID, int)
     --
-    attribute(titel, string)
+    attribute(title, string)
     --
-    attribute(subtitel, string)
+    attribute(subtitle, string)
     --
     attribute(pageCount, int)
     --
@@ -81,6 +81,8 @@ entity borrowed {
     attribute(starteDate, dateTime)
     --
     attribute(endDate, dateTime)
+    --
+    attribute(progress, number)
 }
 
 entity bookAuthor{

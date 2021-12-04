@@ -15,6 +15,13 @@ const db = require("./database/db.config");
 // routes
 // TODO add all routers
 require("./routes/genre.routes")(app);
+require("./routes/subModel.routes")(app);
+require("./routes/paymentMethod.routes")(app);
+require("./routes/book.routes")(app);
+require("./routes/bookGenre.routes")(app);
+require("./routes/borrowed.routes")(app);
+require("./routes/userGenre.routes")(app);
+require("./routes/user.routes")(app);
 
 
 app.get("/", (req, res) => {
