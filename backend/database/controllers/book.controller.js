@@ -6,6 +6,8 @@ const { logger } = require("../../config/logger");
 
 const Book = require(reqPath);
 
+const { ObjectId } = require("mongoose").Types;
+
 // TODO JsDoc
 exports.create = (req, res) => {
     // validate request
@@ -43,40 +45,133 @@ exports.create = (req, res) => {
 };
 
 exports.findAll = (req, res) => {
-    Book.find({}, (err, books) => {
+    Book.aggregate([
+        {$lookup: {
+            from: "bookgenres",
+            as: "bookgenres",
+            let: {book_id: "$_id"},
+            pipeline: [
+                {$match: {$expr: {$and: [{$eq: ["$bookId", "$$book_id"]}]}}},
+                {$lookup: {
+                    from: "genres",
+                    as: "genres",
+                    let: {bookGenre_genreId: "$genreId"},
+                    pipeline: [
+                        {$match: {$expr: {$and: [{$eq: ["$_id", "$$bookGenre_genreId"]}]}}}
+                    ]
+                }},
+                {$project: {
+                    genres: {
+                        $map: {
+                            input: "$genres",
+                            as: "genres",
+                            in: "$$genres.name"
+                        }
+                    }
+                }}
+            ]
+        }},
+        {$project: {
+            _id: 1,
+            title: 1,
+            subtitle: 1,
+            pageCount: 1,
+            ISBN13: 1,
+            coverUrl: 1,
+            authors: 1,
+            language: 1,
+            description: 1,
+            genres: {
+                $map: {
+                    input: "$bookgenres",
+                    as: "bookgenres",
+                    in: {
+                        $reduce: {
+                            input: "$$bookgenres.genres",
+                            initialValue: "",
+                            in: {$concat: ["$$value", "$$this"]}
+                        }
+                    }
+                }
+            }
+        }}
+    ], (err, data) => {
         if(err) {
             logger.error("Some error occurred while getting all books:", err);
             res.status(500).send({
                 message: err.message || "Some error occured while getting all books."
             });
-        } else {
-            let bookMap = {};
-
-            books.forEach(book => {
-                bookMap[book._id] = book;
-            });
-            
+        } else {            
             logger.info("All books were received.");
-            res.status(200).send(bookMap);
+            res.status(200).send(data);
         }
     });
 };
 
 exports.findById = (req, res) => {
-    const id = req.params.id;
+    const id = ObjectId(req.params.id);
 
-    Book.findById(id)
-        .then((data) => {
-            if(!data) {
-                logger.error("Book could not be found.");
-                res.status(404).send({message: `Book with id ${id} could not be found.`});
-            } else {
-                logger.info("Book was found.");
-                res.status(200).send(data);
+    Book.aggregate([
+        {$match: {"_id": id}},
+        {$lookup: {
+            from: "bookgenres",
+            as: "bookgenres",
+            let: {book_id: "$_id"},
+            pipeline: [
+                {$match: {$expr: {$and: [{$eq: ["$bookId", "$$book_id"]}]}}},
+                {$lookup: {
+                    from: "genres",
+                    as: "genres",
+                    let: {bookGenre_genreId: "$genreId"},
+                    pipeline: [
+                        {$match: {$expr: {$and: [{$eq: ["$_id", "$$bookGenre_genreId"]}]}}}
+                    ]
+                }},
+                {$project: {
+                    genres: {
+                        $map: {
+                            input: "$genres",
+                            as: "genres",
+                            in: "$$genres.name"
+                        }
+                    }
+                }}
+            ]
+        }},
+        {$project: {
+            _id: 1,
+            title: 1,
+            subtitle: 1,
+            pageCount: 1,
+            ISBN13: 1,
+            coverUrl: 1,
+            authors: 1,
+            language: 1,
+            description: 1,
+            genres: {
+                $map: {
+                    input: "$bookgenres",
+                    as: "bookgenres",
+                    in: {
+                        $reduce: {
+                            input: "$$bookgenres.genres",
+                            initialValue: "",
+                            in: {$concat: ["$$value", "$$this"]}
+                        }
+                    }
+                }
             }
-        })
-        .catch(((err) => {
+        }}
+    ], (err, data) => {
+        if(err) {
             logger.error("Request failed:", err);
             res.status(500).send({message: "Something went wrong with retrieving the book."});
-        }));
+        } else if(!data) {
+            logger.warn("Book could not be found.");
+            res.status(404).send({message: `Book with id ${id} could not be found.`});
+        } else {
+            logger.info("Book was found.");
+            res.status(200).send(data[0]);
+        }
+    });
 };

@@ -3,10 +3,14 @@ module.exports = (app) => {
 
     const router = require("express").Router();
 
+    // TODO openapi anpassen
+
     router.post("/", borrowed.create);
-    router.get("/:id", borrowed.findById);
+    router.get("/:userId", borrowed.findByUserId);
     router.put("/:id", borrowed.update);
-    router.get("/user/:userId", borrowed.findByUserId);
+    router.get("/borrowedBookIds/:userId", borrowed.borrowedBookIds);
+    router.get("/borrowdBookInfo/:id", borrowed.borrowedBookInfoByEntryId);
+    router.get("/borrowdBookInfo/:userId/:bookId", borrowed.borrowedBookInfo);
 
     app.use("/api/borrowed", router);
 

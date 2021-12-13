@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Pride and Prejudice</title>
+<style type="text/css">
+.flow {
+  margin: 0;
+  font-size: 1em;
+}
+.flow .pagebreak {
+  page-break-before: always;
+}
+.flow p {
+  text-align: left;
+  text-indent: 0;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.flow .gstxt_sup {
+  font-size: 75%;
+  position: relative;
+  bottom: 0.5em;
+}
+.flow .gstxt_sub {
+  font-size: 75%;
+  position: relative;
+  top: 0.3em;
+}
+.flow .gstxt_hlt {
+  background-color: yellow;
+}
+.flow div.gtxt_inset_box {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  margin: 1em 1em 1em 1em;
+  border: 1px black solid;
+}
+.flow div.gtxt_footnote {
+  padding: 0 0.5em 0 0.5em;
+  border: 1px black dotted;
+}
+.flow .gstxt_underline {
+  text-decoration: underline;
+}
+.flow .gtxt_heading {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 150%;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.flow .gtxt_h1_heading {
+  text-align: center;
+  font-size: 120%;
+  font-weight: bold;
+}
+.flow .gtxt_h2_heading {
+  font-size: 110%;
+  font-weight: bold;
+}
+.flow .gtxt_h3_heading {
+  font-weight: bold;
+}
+.flow .gtxt_lineated {
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  white-space: pre-wrap;
+}
+.flow .gtxt_lineated_code {
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+.flow .gtxt_quote {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow .gtxt_list_entry {
+  margin-left: 2ex;
+  text-indent: -2ex;
+}
+.flow .gimg_graphic {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow .gimg_table {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow {
+  font-family: serif;
+}
+.flow span,p {
+  font-family: inherit;
+}
+
+</style></head>
+<body><div style="display:none;"><a id="GBS.PA1.w.2.0.0"></a></div>
+
+<div class="flow" style="">
+<div class="pagebreak"></div>
+<a class="page" id="ORIG-GBS.PA1"></a>
+<div id="block.32.1.0.box.495.599.259.29.q.70" class="gtxt_body" style="margin-bottom: 1.5em;">
+<a id="ORIG-GBS.PA1.w.1.0.0"></a><p class="gtxt_body gtxt_heading" style="text-align:center;" id="para.32.1.0.box.495.599.259.29.q.70">CHAPTER I</p>
+</div>
+<div id="block.32.2.0.box.122.691.1001.1154.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA1.w.2.0.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.32.2.0.box.124.691.999.122.q.60"><span style="font-variant:small-caps;">It </span>is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife.</p>
+<a id="ORIG-GBS.PA1.w.2.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.32.2.1.box.123.829.999.227.q.60"><a id="GBS.PA1.w.2.1.0"></a>However little known the feelings or views of such a man may be on his first entering a neighborhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters.</p>
+<a id="ORIG-GBS.PA1.w.2.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.32.2.2.box.124.1064.997.85.q.60"><a id="GBS.PA1.w.2.2.0"></a>&quot;My dear Mr. Bennet,&quot; said his lady to him one day, &quot;have you heard that Netherfield Park is let at last?&quot;</p>
+<a id="ORIG-GBS.PA1.w.2.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.32.2.3.box.166.1157.639.39.q.60"><a id="GBS.PA1.w.2.3.0"></a>Mr. Bennet replied that he had not.</p>
+<a id="ORIG-GBS.PA1.w.2.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.32.2.4.box.122.1204.998.76.q.50"><a id="GBS.PA1.w.2.4.0"></a>&quot;But it is,&quot; returned she; &quot;for Mrs. Long has just been here and she told me all about it.&quot;</p>
+<a id="ORIG-GBS.PA1.w.2.5.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.32.2.5.box.165.1297.524.30.q.60"><a id="GBS.PA1.w.2.5.0"></a>Mr. Bennet made no answer.</p>
+<a id="ORIG-GBS.PA1.w.2.6.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.32.2.6.box.123.1343.996.85.q.60"><a id="GBS.PA1.w.2.6.0"></a>&quot;Do not you want to know who has taken it?&quot; cried his wife impatiently.</p>
+<a id="ORIG-GBS.PA1.w.2.7.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.32.2.7.box.123.1435.995.85.q.60"><span style="font-style:italic;"><a id="GBS.PA1.w.2.7.0"></a>&quot;You </span>want to tell me and I have no objection to hearing it.&quot;</p>
+<a id="ORIG-GBS.PA1.w.2.8.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.32.2.8.box.164.1528.491.38.q.70"><a id="GBS.PA1.w.2.8.0"></a>This was invitation enough.</p>
+<a id="ORIG-GBS.PA1.w.2.9.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.32.2.9.box.122.1574.996.271.q.60"><a id="GBS.PA1.w.2.9.0"></a>&quot;Why, my dear, you must know, Mrs. Long says that Netherfield is taken by a young man of large fortune from the north of England; that he came down on Monday in a chaise and four to see the place, and was so much delighted with it, that he agreed with Mr. Morris immediately; that he is to take possession before<a id="ORIG-GBS.PA2.w.1.0.0"></a><span class="gtxt_body" id="para.33.1.0.box.127.204.995.86.q.60"><a id="GBS.PA2"></a><a id="GBS.PA2.w.0.0.0"></a><a id="GBS.PA2.w.1.0.0"></a>
+Michaelmas, and some of his servants are to be in the house by the end of next week.&quot;</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA2.w.1.1.0"></a></div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA2"></a>
+<div id="block.33.1.0.box.125.204.1000.1612.q.50" class="gtxt_body">
+<a id="ORIG-GBS.PA2.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.1.box.171.298.379.29.q.70">&quot;What is his name?&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.2.box.172.344.184.39.q.101">&quot;Bingley.&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.3.box.171.390.474.39.q.60">&quot;Is he married or single?&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.4.box.125.435.998.133.q.50"><a id="GBS.PA2.w.1.2.0"></a>&quot;Oh! single, my dear, to be sure! A single man of large fortune; four or five thousand a-year. What a fine thing for our girls!&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.5.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.5.box.171.575.633.30.q.60"><a id="GBS.PA2.w.1.3.0"></a>&quot;How so? how can it affect them?&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.6.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.6.box.126.621.998.132.q.50"><a id="GBS.PA2.w.1.4.0"></a>&quot;My dear Mr. Bennet,&quot; replied his wife, &quot;how can you be so tiresome! you must know that I am thinking of his marrying one of them.&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.7.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.7.box.171.760.667.39.q.70"><a id="GBS.PA2.w.1.5.0"></a>&quot;Is that his design in settling here?&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.8.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.8.box.126.806.999.131.q.60"><a id="GBS.PA2.w.1.6.0"></a>&quot;Design! nonsense, how can you talk so! But it is very likely that he <span style="font-style:italic;">may </span>fall in love with one of them, and therefore you must visit him as soon as he comes.&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.9.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.9.box.125.944.1000.224.q.60"><a id="GBS.PA2.w.1.7.0"></a>&quot;I see no occasion for that. You and the girls may go, or you may send them by themselves, which perhaps will be still better, for as you are as handsome as any of them, Mr. Bingley might like you the best of the party.&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.10.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.10.box.125.1176.1000.222.q.60"><a id="GBS.PA2.w.1.8.0"></a>&quot;My dear, you flatter me. I certainly <span style="font-style:italic;">have </span>had my share of beauty, but I do not pretend to be anything extraordinary now. When a woman has five grown-up daughters, she ought to give over thinking of her own beauty.&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.11.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.11.box.126.1407.994.76.q.60"><a id="GBS.PA2.w.1.9.0"></a>&quot;In such cases, a woman has not often much beauty to think of.&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.12.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.12.box.128.1499.994.86.q.50"><a id="GBS.PA2.w.1.10.0"></a>&quot;But, my dear, you must indeed go and see Mr. Bingley when he comes into the neighborhood.&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.13.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.13.box.173.1592.793.38.q.70"><a id="GBS.PA2.w.1.11.0"></a>&quot;It is more than I engage for, I assure you.&quot;</p>
+<a id="ORIG-GBS.PA2.w.1.14.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.33.1.14.box.126.1639.998.177.q.60"><a id="GBS.PA2.w.1.12.0"></a>&quot;But consider your daughters. Only think what an establishment it would be for one of them. Sir William and Lady Lucas are determined to go, merely on that account, for in general, you know, they visit no new<a id="ORIG-GBS.PA3.w.1.0.0"></a><span class="gtxt_body" id="para.34.1.0.box.113.195.999.86.q.50"><a id="GBS.PA3"></a><a id="GBS.PA3.w.0.0.0"></a><a id="GBS.PA3.w.1.0.0"></a>comers. Indeed you must go, for it will be impossible for as to visit him if you do not.&quot;</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA3.w.1.1.0"></a></div>
+
+<div style="display:none;"><a id="GBS.PA3.w.1.1.0.1"></a></div><div style="display:none;"><a id="GBS.PA3.w.1.2.0"></a></div><div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA3"></a>
+<div id="block.34.1.0.box.113.195.1004.1604.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA3.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.34.1.1.box.113.290.1001.224.q.60">&quot;You are over-scrupulous, surely. I dare say Mr. Bingley will be very glad to see you; and I will send a few lines by you to assure him of my hearty consent to his marrying whichever he chooses of the girls: though I must throw in a good word for my little Lizzy.&quot;</p>
+<a id="ORIG-GBS.PA3.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.34.1.2.box.114.521.1000.214.q.50">&quot;I desire you will do no such thing. Lizzy is not a bit better than the others; and I am sure she is not half so handsome as Jane, nor half so good-humored as Lydia. But you are always giving <span style="font-style:italic;">her </span>the preference.&quot;</p>
+<a id="ORIG-GBS.PA3.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.34.1.3.box.114.751.1001.168.q.50"><a id="GBS.PA3.w.1.3.0"></a>&quot;They have none of them much to recommend them,&quot; replied he; &quot;they are all silly and ignorant, like other girls; but Lizzy has something more of quickness than her sisters.&quot;</p>
+<a id="ORIG-GBS.PA3.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.34.1.4.box.115.936.1000.132.q.60"><a id="GBS.PA3.w.1.4.0"></a>&quot;Mr. Bennet, how can you abuse your own children in such a way! You take delight in vexing me. You have no compassion on my poor nerves.&quot;</p>
+<a id="ORIG-GBS.PA3.w.1.5.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.34.1.5.box.116.1075.1000.176.q.60"><a id="GBS.PA3.w.1.5.0"></a>&quot;You mistake me, my dear. I have a high respect for your nerves. They are my old friends. I have heard you mention them with consideration these twenty years at least.&quot;</p>
+<a id="ORIG-GBS.PA3.w.1.6.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.34.1.6.box.160.1256.680.42.q.70"><a id="GBS.PA3.w.1.6.0"></a>&quot;Ah! you do not know what I suffer.&quot;</p>
+<a id="ORIG-GBS.PA3.w.1.7.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.34.1.7.box.116.1307.999.121.q.60"><a id="GBS.PA3.w.1.7.0"></a>&quot;But I hope you will get over it, and live to see many young men of four thousand a-year come into the neighborhood.&quot;</p>
+<a id="ORIG-GBS.PA3.w.1.8.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.34.1.8.box.117.1445.1000.85.q.60"><a id="GBS.PA3.w.1.8.0"></a>&quot;It will be no use to us, if twenty such should come, since you will not visit them.&quot;</p>
+<a id="ORIG-GBS.PA3.w.1.9.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.34.1.9.box.118.1538.999.76.q.60"><a id="GBS.PA3.w.1.9.0"></a>&quot;Depend upon it, my dear, that when there are twenty, I will visit them all.&quot;</p>
+<a id="ORIG-GBS.PA3.w.1.10.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.34.1.10.box.113.1630.1004.169.q.60"><a id="GBS.PA3.w.1.10.0"></a>Mr. Bennet was so odd a mixture of quick parts, sarcastic humor, reserve, and caprice, that the experience of three-and-twenty years had been insufficient to make his wife understand his character. <span style="font-style:italic;">Her </span>mind was<a id="ORIG-GBS.PA4.w.1.0.0"></a><span class="gtxt_body" id="para.35.1.0.box.122.191.999.227.q.60"><a id="GBS.PA4"></a><a id="GBS.PA4.w.0.0.0"></a><a id="GBS.PA4.w.1.0.0"></a>
+less difficult to develop. She was a woman of mean understanding, little information, and uncertain temper. When she was discontented, she fancied herself nervous. The business of her life was to get her daughters married; its solace was visiting and news.</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA4.w.2.0.0"></a></div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA4"></a>
+<div id="block.35.1.0.box.122.191.999.227.q.60" class="gtxt_body" style="margin-bottom: 1.5em;">
+</div>
+</div>
+
+<div style="display:none;"><a id="GBS.PA4.w.2.0.0.1"></a></div></body></html>

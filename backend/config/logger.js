@@ -6,7 +6,7 @@ log4js.configure({
             type: "console",
             layout: {
                 type: "pattern",
-                pattern: "\u001b[38;5;245m[%d{dd.MM.yyyy hh:mm:ss}]\u001b[0m %[[%p]%] - %m"
+                pattern: "\u001b[38;5;245m[%d{hh:mm:ss}]\u001b[0m %[[%p]%] - %m"
             }
         } 
     },

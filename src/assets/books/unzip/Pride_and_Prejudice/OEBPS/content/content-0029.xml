@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Pride and Prejudice</title>
+<style type="text/css">
+.flow {
+  margin: 0;
+  font-size: 1em;
+}
+.flow .pagebreak {
+  page-break-before: always;
+}
+.flow p {
+  text-align: left;
+  text-indent: 0;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.flow .gstxt_sup {
+  font-size: 75%;
+  position: relative;
+  bottom: 0.5em;
+}
+.flow .gstxt_sub {
+  font-size: 75%;
+  position: relative;
+  top: 0.3em;
+}
+.flow .gstxt_hlt {
+  background-color: yellow;
+}
+.flow div.gtxt_inset_box {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  margin: 1em 1em 1em 1em;
+  border: 1px black solid;
+}
+.flow div.gtxt_footnote {
+  padding: 0 0.5em 0 0.5em;
+  border: 1px black dotted;
+}
+.flow .gstxt_underline {
+  text-decoration: underline;
+}
+.flow .gtxt_heading {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 150%;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.flow .gtxt_h1_heading {
+  text-align: center;
+  font-size: 120%;
+  font-weight: bold;
+}
+.flow .gtxt_h2_heading {
+  font-size: 110%;
+  font-weight: bold;
+}
+.flow .gtxt_h3_heading {
+  font-weight: bold;
+}
+.flow .gtxt_lineated {
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  white-space: pre-wrap;
+}
+.flow .gtxt_lineated_code {
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+.flow .gtxt_quote {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow .gtxt_list_entry {
+  margin-left: 2ex;
+  text-indent: -2ex;
+}
+.flow .gimg_graphic {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow .gimg_table {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow {
+  font-family: serif;
+}
+.flow span,p {
+  font-family: inherit;
+}
+
+</style></head>
+<body><div style="display:none;"><a id="GBS.PA149.w.2.0.0"></a></div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA149"></a>
+<div id="block.180.1.0.box.471.260.352.29.q.70" class="gtxt_body" style="margin-bottom: 1.5em;">
+<a id="ORIG-GBS.PA149.w.1.0.0"></a><p class="gtxt_body gtxt_heading" style="text-align:center;" id="para.180.1.0.box.471.260.352.29.q.70">CHAPTER XXVI</p>
+</div>
+<div id="block.180.2.0.box.149.352.1018.1471.q.50" class="gtxt_body">
+<a id="ORIG-GBS.PA149.w.2.0.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.180.2.0.box.150.352.998.177.q.60"><span style="font-variant:small-caps;">Mrs. </span><span style="font-variant:small-caps;">Gardiner&#39;s </span>caution to Elizabeth was punctually and kindly given on the first favorable opportunity of speaking to her alone; after honestly telling her what she thought, she thus went on:&#8212;</p>
+<a id="ORIG-GBS.PA149.w.2.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.180.2.1.box.150.537.1017.593.q.50"><a id="GBS.PA149.w.2.1.0"></a>&quot;You are too sensible a girl, Lizzy, to fall in love merely because you are warned against it; and, therefore, I am not afraid of speaking openly. Seriously, I would have you be on your guard. Do not involve yourself or endeavor to involve him in an affection which the want of fortune would make so very imprudent.&#160;I&#160;have nothing to say against <span style="font-style:italic;">him</span><span style="font-style:italic;">; </span>he is a most interesting young man; and if he had the fortune h<a id="GBS.PA149.w.2.2.0"></a>e ought to have, I should think you could not do better. But as it is, you must not let your fancy run away with you. You have sense, and we all expect you to use it. Your father would depend on <span style="font-style:italic;">your </span>resolution and good conduct, I am sure. You must not disappoint your father.&quot;</p>
+<a id="ORIG-GBS.PA149.w.2.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.180.2.2.box.194.1138.810.38.q.60"><a id="GBS.PA149.w.2.3.0"></a>&quot;My dear aunt, this is being serious indeed.&quot;</p>
+<a id="ORIG-GBS.PA149.w.2.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.180.2.3.box.194.1184.953.38.q.60">&quot;Yes, and I hope to engage you to be serious likewise.&quot;</p>
+<a id="ORIG-GBS.PA149.w.2.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.180.2.4.box.150.1230.998.131.q.50"><a id="GBS.PA149.w.2.4.0"></a>&quot;Well, then, you need not be under any alarm. I will take care of myself, and of Mr. Wickham too. He shall not be in love with me, if I can prevent it.&quot;</p>
+<a id="ORIG-GBS.PA149.w.2.5.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.180.2.5.box.194.1369.686.38.q.70"><a id="GBS.PA149.w.2.5.0"></a>&quot;Elizabeth, you are not serious now.&quot;</p>
+<a id="ORIG-GBS.PA149.w.2.6.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.180.2.6.box.149.1415.1001.408.q.50"><a id="GBS.PA149.w.2.6.0"></a>&quot;I beg your pardon, I will try again. At present I am not in love with Mr. Wickham; no, I certainly am not. But he is, beyond all comparison, the most agreeable man I ever saw&#8212;and if he becomes really attached to me&#8212;I believe it will be better that he should not. I see the imprudence of it.&#8212;Oh! <span style="font-style:italic;">that </span>abominable Mr. Darcy&#8212;My father&#39;s opinion of me does me the greatest honor, and I should be miserable to forfeit it. My father, however, is partial to Mr. Wickham. In short,<a id="ORIG-GBS.PA150.w.1.0.0"></a><span class="gtxt_body" id="para.181.1.0.box.126.202.1001.550.q.50"><a id="GBS.PA150"></a><a id="GBS.PA150.w.0.0.0"></a><a id="GBS.PA150.w.1.0.0"></a>
+my dear aunt, I should be very sorry to be the means of making any of you unhappy; but since we see every day that where there is affection, young people are seldom withheld by immediate want of fortune from entering into engagements with each other, how can I promise to be wiser than so many of my fellow-creatures if I am tempted, or how am I even to know that it would be wisdom to resist? <span class="gstxt_sup"></span>All that I can promise you, therefore, is not to be in a hurry. I will not be in a hurry to believe myself his first object. When I am in company with him, I will not be wishing. In  short, I will&#160;do my best.&quot;</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA150.w.1.1.0"></a></div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA150"></a>
+<div id="block.181.1.0.box.126.202.1003.1609.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA150.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.181.1.1.box.128.757.1000.131.q.60">&quot;Perhaps it will be as well if you discourage his coming here so very often. At least, you should not <span style="font-style:italic;">remind </span>your mother of inviting him.&quot;</p>
+<a id="ORIG-GBS.PA150.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.181.1.2.box.129.896.1000.398.q.60"><a id="GBS.PA150.w.1.2.0"></a>&quot;As I did the other day,&quot; said Elizabeth with a conscious smile: &quot;very true, it will be wise in me to refrain from that. But do not imagine that he is always here so often. It is on your account that he has been so frequently invited this week. You know my mother&#39;s ideas as to the necessity of constant company for her friends. But really, and upon my honor, I will try to do what I think to be the wisest; and now I hope you are satisfied.&quot;</p>
+<a id="ORIG-GBS.PA150.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.181.1.3.box.128.1312.1000.177.q.60"><a id="GBS.PA150.w.1.3.0"></a>Her aunt assured her that she was, and Elizabeth having thanked her for the kindness of her hints, they parted; a wonderful instance of advice being given on such a point, without being resented.</p>
+<a id="ORIG-GBS.PA150.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.181.1.4.box.128.1496.999.315.q.60"><a id="GBS.PA150.w.1.4.0"></a>Mr. Collins returned into Hertfordshire soon after it had been quitted by the Gardiners and Jane; but as he took up his abode with the Lucases, his arrival was no great inconvenience to Mrs. Bennet. His marriage was now fast approaching, and she was at length so far resigned as to think it inevitable, and even repeatedly to say, in an ill-natured tone, that she &quot;<span style="font-style:italic;">wished </span>they<a id="ORIG-GBS.PA151.w.1.0.0"></a><span class="gtxt_body" id="para.182.1.0.box.158.209.999.307.q.60"><a id="GBS.PA151"></a><a id="GBS.PA151.w.0.0.0"></a><a id="GBS.PA151.w.1.0.0"></a>
+might be happy.&quot; Thursday was to be the wedding day, and Wednesday Miss [Lucas] paid her farewell visit; and when she rose to take leave, Elizabeth, ashamed of her mother&#39;s ungracious and reluctant good wishes, and sincerely affected herself, accompanied her out of the room. As they went down stairs together, Charlotte said&#8212;</span></p>
+</div>
+</div>
+
+<div style="display:none;"><a id="GBS.PA151.w.1.0.0.1"></a></div><div style="display:none;"><a id="GBS.PA151.w.1.1.0"></a></div><div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA151"></a>
+<div id="block.182.1.0.box.153.209.1004.1611.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA151.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.182.1.1.box.161.536.995.76.q.70">&quot;I shall depend on hearing from you very often, Eliza.&quot;</p>
+<a id="ORIG-GBS.PA151.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.182.1.2.box.202.633.486.39.q.70"><a id="GBS.PA151.w.1.2.0"></a>&quot;<span style="font-style:italic;">That </span>you certainly shall.&quot;</p>
+<a id="ORIG-GBS.PA151.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.182.1.3.box.159.683.996.76.q.60"><a id="GBS.PA151.w.1.3.0"></a>&quot;And I have another favor to ask. Will you come and see me?&quot;</p>
+<a id="ORIG-GBS.PA151.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.182.1.4.box.202.779.873.39.q.60"><a id="GBS.PA151.w.1.4.0"></a>&quot;We shall often meet, I hope, in Hertfordshire.&quot;</p>
+<a id="ORIG-GBS.PA151.w.1.5.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.182.1.5.box.157.830.998.84.q.60"><a id="GBS.PA151.w.1.5.0"></a>&quot;I am not likely to leave Kent for some time. Promise me, therefore, to come to Hunsford.&quot;</p>
+<a id="ORIG-GBS.PA151.w.1.6.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.182.1.6.box.157.929.998.88.q.60"><a id="GBS.PA151.w.1.6.0"></a>Elizabeth could not refuse, though she foresaw little pleasure in the visit.</p>
+<a id="ORIG-GBS.PA151.w.1.7.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.182.1.7.box.157.1032.998.169.q.60"><a id="GBS.PA151.w.1.7.0"></a>&quot;My father and Maria are to come to me in March,&quot; added Charlotte, &quot;and I hope you will consent to be of the party. Indeed, Eliza, you will be as welcome to me as either of them.&quot;</p>
+<a id="ORIG-GBS.PA151.w.1.8.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.182.1.8.box.153.1225.1001.595.q.60"><a id="GBS.PA151.w.1.8.0"></a>The wedding took place: the bride and bridegroom set off for Kent from the church door, and everybody had as much to say, or to hear, on the subject as usual. Elizabeth soon heard from her friend; and their correspondence was as regular and frequent as it had ever been; that it should be equally unreserved was impossible. Elizabeth could never address her without feeling that all the comfort of intimacy was over, and though determined not to slacken as a correspondent, it was for the sake of what had been, rather than what was. Charlotte&#39;s first letters were received with a good deal of eagerness; there could not but be curiosity to know how she would speak of her new home, how she<a id="ORIG-GBS.PA152.w.1.0.0"></a><span class="gtxt_body" id="para.183.1.0.box.129.199.1000.539.q.60"><a id="GBS.PA152"></a><a id="GBS.PA152.w.0.0.0"></a><a id="GBS.PA152.w.1.0.0"></a>
+would like Lady Catherine,&#160;and how happy she would dare pronounce herself to be; though, when the letters were read, Elizabeth felt that Charlotte expressed herself on every point exactly as she might have foreseen. She wrote cheerfully, seemed surrounded with comforts, and mentioned nothing which she could not praise. The house, furniture, neighborhood, and roads, were all to her taste, and Lady Catherine&#39;s behavior was most friendly and obliging. It was Mr. Collins&#39;s picture of Hunsford and Rosings rationally softened; and Elizabeth perceived that she must wait for her own visit there, to know the rest.</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA152.w.1.1.0"></a></div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA152"></a>
+<div id="block.183.1.0.box.116.199.1013.1611.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA152.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.183.1.1.box.116.754.1011.202.q.50">Jane had already written a few lines to her sister to announce their safe arrival in London; and when she wrote again, Elizabeth hoped it would be in her power to say something of the Bingleys.</p>
+<a id="ORIG-GBS.PA152.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.183.1.2.box.126.940.1000.268.q.60"><a id="GBS.PA152.w.1.2.0"></a>Her impatience for this second letter was as well rewarded as impatience generally is. Jane had been a week in town without either seeing or hearing from Caroline. She accounted for it, however, by supposing that her last letter to her friend from Longbourn had by some accident been lost.</p>
+<a id="ORIG-GBS.PA152.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.183.1.3.box.125.1217.999.131.q.60"><a id="GBS.PA152.w.1.3.0"></a>&quot;My aunt,&quot; she continued, &quot;is going to-morrow into that part of the town, and I shall take the opportunity of calling in Grosvenor Street.&quot;</p>
+<a id="ORIG-GBS.PA152.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.183.1.4.box.123.1356.999.454.q.60"><a id="GBS.PA152.w.1.4.0"></a>She wrote again when the visit was paid, and she had seen Miss Bingley. &quot;I did not think Caroline in spirits,&quot; were her words, &quot;but she was very glad to see me, and reproached me for giving her no notice of my coming to London. I was right, therefore; my last letter had never reached her. I inquired after their brother, of course. He was well, but so much engaged with Mr. Darcy that they scarcely ever saw him. I found that Miss Darcy was expected to dinner. I wish I could see her. My visit was not long, as Caroline and<a id="ORIG-GBS.PA153.w.1.0.0"></a><span class="gtxt_body" id="para.184.1.0.box.141.210.997.77.q.60"><a id="GBS.PA153"></a><a id="GBS.PA153.w.0.0.0"></a><a id="GBS.PA153.w.1.0.0"></a>
+Mrs. Hurst were going out. I dare say I shall soon see them here.&quot;</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA153.w.1.1.0"></a></div>
+
+<div style="display:none;"><a id="GBS.PA153.w.1.1.0.1"></a></div><div style="display:none;"><a id="GBS.PA153.w.1.2.0"></a></div><div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA153"></a>
+<div id="block.184.1.0.box.141.210.998.689.q.60" class="gtxt_body" style="margin-bottom: 1.5em;">
+<a id="ORIG-GBS.PA153.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.184.1.1.box.141.304.997.131.q.60">Elizabeth shook her head over this letter. It convinced her that accident only could discover to Mr. Bingley her sister&#39;s being in town.</p>
+<a id="ORIG-GBS.PA153.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.184.1.2.box.141.442.998.457.q.60">Four weeks passed away, and Jane saw nothing of him. She endeavored to persuade herself that she did not regret it; but she could no longer be blind to Miss Bingley&#39;s inattention. After waiting at home every morning for a fortnight, and inventing every evening a fresh excuse for her, the visitor did at last appear; but the shortness of her stay, and yet more, the alteration of her manner, would allow Jane to deceive herself no longer. The letter which she wrote on this occasion to her sister will prove what she felt.</p>
+</div>
+<div id="block.184.2.0.box.143.952.1000.874.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA153.w.2.0.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.184.2.0.box.143.952.1000.874.q.60"><a id="GBS.PA153.w.2.0.0"></a><a id="GBS.PA153.w.3.0.0"></a>&quot;My dearest Lizzy will, I am sure, be incapable of triumphing in her better judgment, at my expense, when I confess myself to have been entirely deceived in Miss Bingley&#39;s regard for me. But, my dear sister, though the event has proved you right, do not think me obstinate if I still assert, that, considering what her behavior was, my confidence was as natural as your suspicion. I do not at all comprehend her reason for wishing to be intimate with me; but if the same circumstances were to happen again, I am sure I should be deceived again. Caroline did not return my visit till yesterday; and not a note, not a line, did I receive in the meantime. When she did come, it was very evident that she had no pleasure in it; she made a slight, formal apology, for not calling before, said not a word of wishing to see me again, and was in every respect so altered a creature, that when she went away I was perfectly resolved to continue the acquaintance no longer. I pity, though I cannot help blaming her. She was very wrong in sin<a id="ORIG-GBS.PA154.w.1.0.0"></a><span class="gtxt_body" id="para.185.1.0.box.133.206.1002.1337.q.60"><a id="GBS.PA154"></a><a id="GBS.PA154.w.0.0.0"></a><a id="GBS.PA154.w.1.0.0"></a>gling me out as she did; I can safely say that every advance to intimacy began on her side. But I pity her, because she must feel that she has been acting wrong, and because I am very sure that anxiety for her brother is the cause of it. I need not explain myself farther; and though <span style="font-style:italic;">we </span>know this anxiety to be quite needless, yet if she feels it, it will easily account for her behavior to me; and so deservedly dear as he is to his sister, whatever anxiety she may feel on his behalf is natural and amiable. I cannot but wonder, however, at her having any such fears now, because, if he had at all cared about me, we must have met long, long ago. He knows of my being in town, I am certain, from something she said herself; and yet it would seem, by her manner of talking, as if she wanted to persuade herself that he is really partial to Miss Darcy. I cannot understand it. If I were not afraid of judging harshly, I should be almost tempted to say that there is a strong appearance of duplicity in all this. But I will endeavor to banish every painful thought, and think only of what will make me happy&#8212;your affection, and the invariable kindness of my dear uncle and aunt. Let me hear from you very soon. Miss Bingley said something of his never returning to Netherfield again, of giving up the house, but not with any certainty. We had better not mention it. I am extremely glad that you have such pleasant accounts from our friends at Hunsford. Pray go to see them, with Sir William and Maria. I am sure you will be very comfortable there.&#8212;Yours, etc.&quot;</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA154.w.2.0.0"></a></div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA154"></a>
+<div id="block.185.1.0.box.133.206.1002.1337.q.60" class="gtxt_body" style="margin-bottom: 1.5em;">
+</div>
+<div id="block.185.2.0.box.136.1595.1000.224.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA154.w.2.0.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.185.2.0.box.136.1595.1000.224.q.60">This letter gave Elizabeth some pain; but her spirits returned as she considered that Jane would no longer be duped by the sister at least. All expectation from the brother was now absolutely over. She would not even wish for any renewal of his attentions. His char<a id="ORIG-GBS.PA155.w.1.0.0"></a><span class="gtxt_body" id="para.186.1.0.box.123.209.1001.223.q.50"><a id="GBS.PA155"></a><a id="GBS.PA155.w.0.0.0"></a><a id="GBS.PA155.w.1.0.0"></a><a id="GBS.PA155.w.2.0.0"></a>acter sunk on every review of it; and as a punishment for him, as well as a possible advantage to Jane, she seriously hoped he might really soon marry Mr. Darcy&#39;s sister, as by Wickham&#39;s account, she would make him abundantly regret what he had thrown away.</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA155.w.2.1.0"></a></div>
+
+<div style="display:none;"><a id="GBS.PA155.w.2.1.0.1"></a></div><div style="display:none;"><a id="GBS.PA155.w.2.2.0"></a></div><div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA155"></a>
+<div id="block.186.1.0.box.123.209.1001.1616.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA155.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.186.1.1.box.123.440.1001.920.q.60">Mrs. Gardiner about this time reminded Elizabeth of her promise concerning that gentleman, and required information; and Elizabeth had such to send as might rather give contentment to her aunt than to herself. His apparent partiality had subsided, his attentions were over, he was the admirer of someone else. Elizabeth was watchful enough to see it all, but she could see it and write of it without material pain. Her heart had been but slightly touched, and her vanity was satisfied with believing that <span style="font-style:italic;">she </span>would have been his only choice, had fortune permitted it. The sudden acquisition of ten thousand pounds was the most remarkable charm of the young lady to whom he was now rendering himself agreeable; but Elizabeth, less clear-sighted perhaps in this case than in Charlotte&#39;s, did not quarrel with him for his wish of independence. Nothing, on the contrary, could be more natural; and while able to suppose that it cost him a few struggles to relinquish her, she was ready to allow it a wise and desirable measure for both, and could very sincerely wish him happy.</p>
+<a id="ORIG-GBS.PA155.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.186.1.2.box.123.1368.1000.457.q.60">All this was acknowledged to Mrs. Gardiner; and after relating the circumstances, she thus went on:&#8212;&quot;I am now convinced, my dear aunt, that I have never been much in love; for had I really experienced that pure and elevating passion, I should at present detest his very name, and wish him all manner of evil. But my feelings are not only cordial towards <span style="font-style:italic;">him; </span>they are even impartial towards Miss King. I cannot find out that I hate her at all, or that I am in the least unwilling to think her a very good sort of girl. There can be no love in<a id="ORIG-GBS.PA156.w.1.0.0"></a><span class="gtxt_body" id="para.187.1.0.box.146.200.999.455.q.60"><a id="GBS.PA156"></a><a id="GBS.PA156.w.0.0.0"></a><a id="GBS.PA156.w.1.0.0"></a>
+all this. My watchfulness has been effectual; and though I should certainly be a more interesting object to all my acquaintance were I distractedly in love with him, I cannot say that I regret my comparative insignificance. Importance may sometimes be purchased too dearly. Kitty and Lydia take his defection much more to heart than I do. They are young in the ways of the world, and not yet open to the mortifying conviction that handsome young men must have something to live on as well as the plain.&quot;</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA156.w.2.0.0"></a></div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA156"></a>
+<div id="block.187.1.0.box.146.200.999.455.q.60" class="gtxt_body" style="margin-bottom: 1.5em;">
+</div>
+</div>
+
+<div style="display:none;"><a id="GBS.PA156.w.2.0.0.1"></a></div></body></html>

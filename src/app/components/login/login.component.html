@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<div class="center">
+    <form class="row g-3" (ngSubmit)="login()">
+        <div class="col-md-6">
+            <label for="validationDefaultUsername" class="form-label">E-Mail</label
+            >
+            <div class="input-group">
+                <input
+                    name="email"
+                    type="email" 
+                    class="form-control"
+                    id="validationDefaultUsername"
+                    aria-describedby="inputGroupPrepend2"
+                    required
+                    ngModel
+                    [(ngModel)]="user.email"
+                />
+            </div>
+        </div>
+      <div class="col-md-6">
+        <label for="validationDefault02" class="form-label">Password</label>
+        <input
+            name="pswd"
+            type="password"
+            class="form-control"
+            id="validationDefault02"
+            ngModel
+            required
+            [(ngModel)]="user.pswd"
+        />
+
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" type="submit">Login</button>
+        </div>
+        <div class="col-md-10">
+            <button class="btn btn-secondary" type="submit" routerLink="/signup">Need to sign up?</button>
+        </div>
+    </form>
+</div>

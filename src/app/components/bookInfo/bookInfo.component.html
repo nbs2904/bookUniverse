@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5">
+    <div class="row">
+        <button class="btn btn-secondary" type="submit" (click)="borrowBook()">Borrow</button>
+    </div>
+    <br>
+    <div class="row row-cols-2">
+        <div class="col-md-6 col-12 book-cover p-4" align="center">
+            <img src="/assets/img/{{book.coverUrl}}" alt="{{ book.coverUrl }}" height="400">
+        </div>
+        <div class="col-md-6 col-12 book-content p-4">
+            <h2 *ngIf="book.title">{{book.title}}</h2>
+            <h4 *ngIf="book.subtitle">{{ book.subtitle }}</h4>
+            <br>
+            <ng-container *ngIf="book.authors">
+                <p *ngFor="let author of book.authors">{{ author }}</p>
+            </ng-container>
+            <ng-container *ngIf="book.genres">
+                <a *ngFor="let genre of book.genres; index as k">{{(!k ? "" : ", ") + genre}}</a>
+            </ng-container>
+            <p *ngIf="book.ISBN13">ISBN13: {{ book.ISBN13 }}</p>
+            <p *ngIf="book.language">{{ book.language }}</p>
+            <p *ngIf="book.pageCount">Page Count: {{ book.pageCount }}</p>
+            <p *ngIf="book.description">{{ book.description }}</p>
+
+        </div>
+    </div>
+</div>
+

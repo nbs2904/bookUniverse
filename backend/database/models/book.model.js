@@ -21,11 +21,7 @@ const bookSchema = new Schema({
         required: [true, "Author must not be empty"],
     },
     language: String,
-    description: String,
-    content:{
-        type: String,
-        required: [true, "Content must not be empty"],
-    },
+    description: String
 });
 
 const book = mongoose.model("Book", bookSchema);

@@ -1,0 +1,68 @@
+import { HttpClient } from "@angular/common/http";
+import { Book } from "./../../interfaces/book";
+import { BookService } from "./../../services/book.service";
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+
+// TODO anzahl limitieren, die ausgeliehen werden kann
+
+@Component({
+    selector: "app-bookInfo",
+    templateUrl: "./bookInfo.component.html",
+    styleUrls: ["./bookInfo.component.scss"]
+})
+export class BookInfoComponent implements OnInit {
+    book: Book = {
+        _id: "",
+        title: "",
+        subtitle: "",
+        pageCount: 0,
+        ISBN13: "",
+        coverUrl: "",
+        authors: [],
+        language: "",
+        description: ""
+    };
+
+    constructor(private route: ActivatedRoute, private bookService: BookService, private http: HttpClient, private router: Router) { }
+
+    ngOnInit() {
+        this.route.params.subscribe((params) => {
+            this.book._id = params["bookId"];
+
+            this.bookService.getBookDetails(this.book._id).subscribe(
+                (res) => {
+                    console.log(res);
+                    this.book = res;                    
+                },
+                (err) => {
+                    console.log(err);
+                    this.router.navigateByUrl("/catalogue");
+                }
+            );
+        });
+    }
+
+    borrowBook(){
+        // ?  set endDate two weeks after startDate
+        const newEntry = {
+            userId: localStorage.getItem("userId"),
+            bookId: this.book._id,
+            startDate: new Date(),
+            endDate: new Date(Date.now() + 12096e5),
+            progress: 0
+        };    
+        
+        this.http.post<any>("api/borrowed", newEntry).toPromise()
+            .then((res) => {
+                console.log(res);
+                this.router.navigateByUrl("/library");
+            
+            })
+            .catch((err) => {
+                console.error(err);                
+            });        
+    }
+
+}
+

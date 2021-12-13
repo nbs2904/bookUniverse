@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Pride and Prejudice</title>
+<style type="text/css">
+.flow {
+  margin: 0;
+  font-size: 1em;
+}
+.flow .pagebreak {
+  page-break-before: always;
+}
+.flow p {
+  text-align: left;
+  text-indent: 0;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.flow .gstxt_sup {
+  font-size: 75%;
+  position: relative;
+  bottom: 0.5em;
+}
+.flow .gstxt_sub {
+  font-size: 75%;
+  position: relative;
+  top: 0.3em;
+}
+.flow .gstxt_hlt {
+  background-color: yellow;
+}
+.flow div.gtxt_inset_box {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  margin: 1em 1em 1em 1em;
+  border: 1px black solid;
+}
+.flow div.gtxt_footnote {
+  padding: 0 0.5em 0 0.5em;
+  border: 1px black dotted;
+}
+.flow .gstxt_underline {
+  text-decoration: underline;
+}
+.flow .gtxt_heading {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 150%;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.flow .gtxt_h1_heading {
+  text-align: center;
+  font-size: 120%;
+  font-weight: bold;
+}
+.flow .gtxt_h2_heading {
+  font-size: 110%;
+  font-weight: bold;
+}
+.flow .gtxt_h3_heading {
+  font-weight: bold;
+}
+.flow .gtxt_lineated {
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  white-space: pre-wrap;
+}
+.flow .gtxt_lineated_code {
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+.flow .gtxt_quote {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow .gtxt_list_entry {
+  margin-left: 2ex;
+  text-indent: -2ex;
+}
+.flow .gimg_graphic {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow .gimg_table {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow {
+  font-family: serif;
+}
+.flow span,p {
+  font-family: inherit;
+}
+
+</style></head>
+<body><div style="display:none;"><a id="GBS.PA338.w.3.0.0"></a><a id="GBS.PA338.w.4.0.0"></a></div>
+
+<div class="flow" style="">
+<div id="block.369.2.0.box.522.728.327.30.q.70" class="gtxt_body" style="margin-bottom: 1.5em;">
+<a id="ORIG-GBS.PA338.w.2.0.0"></a><p class="gtxt_body gtxt_heading" id="para.369.2.0.box.522.728.327.30.q.70">CHAPTER LIII</p>
+</div>
+<div id="block.369.3.0.box.151.808.1037.1005.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA338.w.3.0.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.369.3.0.box.188.808.999.223.q.60"><span style="font-variant:small-caps;">Mr. </span><span style="font-variant:small-caps;">Wickham </span>was so perfectly satisfied with this conversation, that he never again distressed himself or provoked his dear sister Elizabeth by introducing the subject of it; and she was pleased to find that she had said enough to keep him quiet.</p>
+<a id="ORIG-GBS.PA338.w.3.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.369.3.1.box.186.1039.1002.215.q.60"><a id="GBS.PA338.w.4.1.0"></a>The day of his and Lydia&#39;s departure soon came, and Mrs. Bennet was forced to submit to a separation which, as her husband by no means entered into her scheme of their all going to Newcastle, was likely to continue at least a twelvemonth.</p>
+<a id="ORIG-GBS.PA338.w.3.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.369.3.2.box.188.1270.1000.85.q.60"><a id="GBS.PA338.w.4.2.0"></a>&quot;Oh! my dear Lydia,&quot; she cried, &quot;when shall we meet again?&quot;</p>
+<a id="ORIG-GBS.PA338.w.3.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.369.3.3.box.186.1362.1001.86.q.60"><a id="GBS.PA338.w.4.3.0"></a>&quot;Oh, Lord! I don&#39;t know. Not these two or three years, perhaps.&quot;</p>
+<a id="ORIG-GBS.PA338.w.3.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.369.3.4.box.162.1455.715.78.q.60"><a id="GBS.PA338.w.4.4.0"></a>&quot;Write to me very often, my dear.&quot;</p>
+<a id="ORIG-GBS.PA338.w.3.5.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.369.3.5.box.151.1501.1036.162.q.60"><a id="GBS.PA338.w.4.5.0"></a>&quot;As often as I can. But you know married women have never much time for writing. My sisters may write to <span style="font-style:italic;">me. </span>They will have nothing else to do.&quot; <i> </i></p>
+<a id="ORIG-GBS.PA338.w.3.6.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.369.3.6.box.185.1640.1002.131.q.60"><a id="GBS.PA338.w.4.6.0"></a>Mr. Wickham&#39;s adieus were much more affectionate than his wife&#39;s. He smiled, looked handsome, and said many pretty things.</p>
+<a id="ORIG-GBS.PA338.w.3.7.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.369.3.7.box.230.1778.957.35.q.60"><a id="GBS.PA338.w.4.7.0"></a>&quot;He is as fine a fellow.&quot; said Mr. Bennet, as soon as<a id="ORIG-GBS.PA339.w.1.0.0"></a><span class="gtxt_body" id="para.370.1.0.box.112.195.996.177.q.60"><a id="GBS.PA339"></a><a id="GBS.PA339.w.0.0.0"></a><a id="GBS.PA339.w.1.0.0"></a><a id="GBS.PA339.w.2.0.0"></a>
+they were out of the house, &quot;as ever I saw. He simpers, and smirks, and makes love to us all. I am prodigiously proud of him. I defy even Sir William Lucas himself to produce a more valuable son-in-law.&quot;</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA339.w.2.1.0"></a></div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA339"></a>
+<div id="block.370.1.0.box.111.195.1000.1613.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA339.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.370.1.1.box.114.380.995.85.q.60">The loss of her daughter made Mrs. Bennet very dull for several days.</p>
+<a id="ORIG-GBS.PA339.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.370.1.2.box.111.473.998.122.q.60"><a id="GBS.PA339.w.2.2.0"></a>&quot;I often think,&quot; said she, &quot;that there is nothing so bad as parting with one&#39;s friends. One seems so forlorn without them.&quot;</p>
+<a id="ORIG-GBS.PA339.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.370.1.3.box.112.611.998.132.q.60"><a id="GBS.PA339.w.2.3.0"></a>&quot;This is the consequence, you see, madam, of marrying a daughter,&quot; said Elizabeth. &quot;It must make you better satisfied that your other four are single.&quot;</p>
+<a id="ORIG-GBS.PA339.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.370.1.4.box.113.750.997.178.q.60"><a id="GBS.PA339.w.2.4.0"></a>&quot;It is no such thing. Lydia does not leave me because she is married, but only because her husband&#39;s regiment happens to be so far off. If that had been nearer, she would not have gone so soon.&quot;</p>
+<a id="ORIG-GBS.PA339.w.1.5.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.370.1.5.box.115.936.996.408.q.60"><a id="GBS.PA339.w.2.5.0"></a>But the spiritless condition which this event threw her into was shortly relieved, and her mind opened again to the agitation of hope, by an article of news which then began to be in circulation. The housekeeper at Netherfield had received orders to prepare for the arrival of her master, who was coming down in a day or two, to shoot there for several weeks. Mrs. Bennet was quite in the fidgets. She looked at Jane, and smiled, and shook her head by turns.</p>
+<a id="ORIG-GBS.PA339.w.1.6.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.370.1.6.box.111.1351.999.457.q.60"><a id="GBS.PA339.w.2.6.0"></a>&quot;Well, well, and so Mr. Bingley is coming down, sister&quot; (for Mrs. Philips first brought the news). &quot;Well, so much the better. Not that I care about it, though. He is nothing to us, you know, and I am sure <span style="font-style: italic;">I </span>never want to see him again. But, however, he is very welcome to come to Netherfield, if he likes it. And who knows what <span style="font-style:italic;">may </span>happen? But that is nothing to us. You know, sister, we agreed long ago never to mention a word about it. And so, is it quite certain he is coming?&quot;</p>
+</div>
+</div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA340"></a>
+<div id="block.371.1.0.box.164.189.1001.1615.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA340.w.1.0.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.371.1.0.box.164.189.998.400.q.60"><a id="GBS.PA340"></a><a id="GBS.PA340.w.0.0.0"></a><a id="GBS.PA340.w.1.0.0"></a>&quot;You may depend on it,&quot; replied the other, &quot;for Mrs. Nichols was in Meryton last night; I saw her passing by, and went out myself on purpose to know the truth of it; and she told me that it was certainly true. He comes down on Thursday at the latest, very likely on Wednesday. She was going to the butcher&#39;s, she told me, on purpose to order in some meat on Wednesday, and she has got three couple of ducks just fit to be killed.&quot;</p>
+<a id="GBS.PA340.w.1.0.0.1"></a><a id="GBS.PA340.w.1.1.0"></a><a id="ORIG-GBS.PA340.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.371.1.1.box.164.606.999.178.q.60">Miss Bennet had not been able to hear of his coming without changing color. It was many months since she had mentioned his name to Elizabeth; but now, as soon as they were alone together, she said&#8212;</p>
+<a id="ORIG-GBS.PA340.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.371.1.2.box.165.792.1000.410.q.60"><a id="GBS.PA340.w.1.2.0"></a>&quot;I saw you look at me to-day, Lizzy, when my aunt told us of the present report; and I know I appeared distressed; but don&#39;t imagine it was from any silly cause. I was only confused for the moment, because I felt that I <span style="font-style:italic;">should </span>be looked at. I do assure you that the news does not affect me either with pleasure or pain. I am glad of one thing&#8212;that he comes alone; because we shall see the less of him. Not that I am afraid of <span style="font-style:italic;">myself, </span>but I dread other people&#39;s remarks.&quot;</p>
+<a id="ORIG-GBS.PA340.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.371.1.3.box.164.1209.1001.317.q.60"><a id="GBS.PA340.w.1.3.0"></a>Elizabeth did not know what to make of it. Had she not seen him in Derbyshire, she might have supposed him capable of coming there with no other view than what was acknowledged; but she still thought him partial to Jane, and she wavered as to the greater probability of his coming there <span style="font-style:italic;">with </span>his friend&#39;s permission, or being bold enough to come without it.</p>
+<a id="ORIG-GBS.PA340.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.371.1.4.box.164.1533.1000.169.q.60"><a id="GBS.PA340.w.1.4.0"></a>&quot;Yet it is hard,&quot; she sometimes thought, &quot;that this poor man cannot come to a house which he has legally hired without raising all this speculation. I <span style="font-style:italic;">will </span>leave him to himself.&quot;</p>
+<a id="ORIG-GBS.PA340.w.1.5.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.371.1.5.box.164.1719.999.85.q.60"><a id="GBS.PA340.w.1.5.0"></a>In spite of what her sister declared, and really believed to be her feelings, in the expectation of his ar<a id="ORIG-GBS.PA341.w.1.0.0"></a><span class="gtxt_body" id="para.372.1.0.box.115.212.997.130.q.60"><a id="GBS.PA341"></a><a id="GBS.PA341.w.0.0.0"></a><a id="GBS.PA341.w.1.0.0"></a>rival, Elizabeth could easily perceive that her spirits were affected by it. They were more disturbed, more unequal, than she had often seen them.</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA341.w.1.1.0"></a></div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA341"></a>
+<div id="block.372.1.0.box.115.212.1000.1606.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA341.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.372.1.1.box.115.351.997.131.q.60">The subject which had been so warmly canvassed between their parents about a twelvemonth ago was now brought forward again.</p>
+<a id="ORIG-GBS.PA341.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.372.1.2.box.117.490.996.84.q.50"><a id="GBS.PA341.w.1.2.0"></a>&quot;As soon as ever Mr. Bingley comes, my dear,&quot; said Mrs. Bennet, &quot;you will wait on him, of course.&quot;</p>
+<a id="ORIG-GBS.PA341.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.372.1.3.box.116.583.997.177.q.60"><a id="GBS.PA341.w.1.3.0"></a>&quot;No, no. You forced me into visiting him last year, and promised, if I went to see him, he should marry one of my daughters. But it ended in nothing, and I will not be sent on a fool&#39;s errand again.&quot;</p>
+<a id="ORIG-GBS.PA341.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.372.1.4.box.117.768.996.132.q.60"><a id="GBS.PA341.w.1.4.0"></a>His wife represented to him how absolutely necessary such an attention would be from all the neighboring gentlemen, on his returning to Netherfield.</p>
+<a id="ORIG-GBS.PA341.w.1.5.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.372.1.5.box.118.906.996.179.q.60"><a id="GBS.PA341.w.1.5.0"></a>&quot;&#39;Tis an <span style="font-style:italic;">etiquette </span>I despise,&quot; said he. &quot;If he wants our society, let him seek it. He knows where we live. I will not spend <span style="font-style:italic;">my </span>hours in running after my neighbors every time they go away and come back again.&quot;</p>
+<a id="ORIG-GBS.PA341.w.1.6.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.372.1.6.box.117.1092.998.262.q.60"><a id="GBS.PA341.w.1.6.0"></a>&quot;Well, all I know is, that it will be abominably rude if you do not wait on him. But, however, that shan&#39;t prevent my asking him to dine here, I am determined. We must have Mrs. Long and the Gouldings soon. That will make thirteen with ourselves, so there will be just room at table for him.&quot;</p>
+<a id="ORIG-GBS.PA341.w.1.7.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.372.1.7.box.117.1371.997.223.q.60"><a id="GBS.PA341.w.1.7.0"></a>Consoled by this resolution, she was the better able to bear her husband&#39;s incivility; though it was very mortifying to know that her neighbors might all see Mr. Bingley, in consequence of it, before <span style="font-style:italic;">they </span>did. As the day of his arrival drew near,</p>
+<a id="ORIG-GBS.PA341.w.1.8.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.372.1.8.box.115.1603.998.215.q.60"><a id="GBS.PA341.w.1.8.0"></a>&quot;I begin to be sorry that he comes at all,&quot; said Jane to her sister. &quot;It would be nothing; I could see him with perfect indifference; but I can hardly bear to hear it thus perpetually talked of. My mother means well; but she does not know&#8212;no one can know&#8212;how much I<a id="ORIG-GBS.PA342.w.1.0.0"></a><span class="gtxt_body" id="para.373.1.0.box.172.202.998.87.q.60"><a id="GBS.PA342"></a><a id="GBS.PA342.w.0.0.0"></a><a id="GBS.PA342.w.1.0.0"></a>
+suffer from what she says. Happy shall I be when his stay at Netherfield is over!&quot;</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA342.w.1.1.0"></a></div>
+
+<div style="display:none;"><a id="GBS.PA342.w.1.1.0.1"></a></div><div style="display:none;"><a id="GBS.PA342.w.1.2.0"></a></div><div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA342"></a>
+<div id="block.373.1.0.box.172.202.1012.1608.q.50" class="gtxt_body">
+<a id="ORIG-GBS.PA342.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.373.1.1.box.175.295.998.217.q.60">&quot;I wish I could say anything to comfort you,&quot; replied Elizabeth; &quot;but it is wholly out of my power. You must feel it; and the usual satisfaction of preaching patience to a sufferer is denied me, because you have always so much.&quot;</p>
+<a id="ORIG-GBS.PA342.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.373.1.2.box.177.528.1000.402.q.60">Mr. Bingley arrived. Mrs. Bennet, through the assistance of servants, contrived to have the earliest tidings of it, that the period of anxiety and fretfulness on her side might be as long as it could. She counted the days that must intervene before their invitation could be sent&#8212;hopeless of seeing him before. But, on the third morning after his arrival in Hertfordshire, she saw him from her dressing-room window enter the paddock and ride towards the house.</p>
+<a id="ORIG-GBS.PA342.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.373.1.3.box.181.947.1000.223.q.50"><a id="GBS.PA342.w.1.3.0"></a>Her daughters were eagerly called to partake of her joy. Jane resolutely kept her place at the table; but Elizabeth, to satisfy her mother, went to the window,&#8213;she looked&#8212;she saw Mr. Darcy with him, and sat down again by her sister.</p>
+<a id="ORIG-GBS.PA342.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.373.1.4.box.186.1176.996.86.q.60"><a id="GBS.PA342.w.1.4.0"></a>&quot;There is a gentleman with him, mamma,&quot; said Kitty; &quot;who can it be?&quot;</p>
+<a id="ORIG-GBS.PA342.w.1.5.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.373.1.5.box.186.1269.995.77.q.50"><a id="GBS.PA342.w.1.5.0"></a>&quot;Some acquaintance or other, my dear, I suppose; I am sure I do not know.&quot;</p>
+<a id="ORIG-GBS.PA342.w.1.6.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.373.1.6.box.186.1361.998.132.q.50"><a id="GBS.PA342.w.1.6.0"></a>&quot;La!&quot; replied Kitty, &quot;it looks just like that man that used to be with him before,&#8212;Mr. what&#39;s his name.&#8213;That tall, proud man.&quot;</p>
+<a id="ORIG-GBS.PA342.w.1.7.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.373.1.7.box.187.1499.996.180.q.50"><a id="GBS.PA342.w.1.7.0"></a>&quot;Good gracious! Mr. Darcy!&#8212;and so it does, I vow. Well, any friend of Mr. Bingley&#39;s will always be welcome here, to be sure; but else I must say that I hate the very sight of him.&quot;</p>
+<a id="ORIG-GBS.PA342.w.1.8.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.373.1.8.box.189.1684.995.126.q.60"><a id="GBS.PA342.w.1.8.0"></a>Jane looked at Elizabeth with surprise and concern. She knew but little of their meeting in Derbyshire, and therefore felt for the awkwardness which must attend<a id="ORIG-GBS.PA343.w.1.0.0"></a><span class="gtxt_body" id="para.374.1.0.box.105.192.1000.963.q.60"><a id="GBS.PA343"></a><a id="GBS.PA343.w.0.0.0"></a><a id="GBS.PA343.w.1.0.0"></a>
+her sister, in seeing him almost for the first time after receiving his explanatory letter. Both sisters were uncomfortable enough. Each felt for the other, and of course for themselves; and their mother talked on, of her dislike of Mr. Darcy, and her resolution to be civil to him only as Mr. Bingley&#39;s friend, without being heard by either of them. But Elizabeth had sources of uneasiness which could not be suspected by Jane, to whom she had never yet had courage to show Mrs. Gardiner&#39;s letter, or to relate her own change of sentiment towards him. To Jane, he could be only a man whose proposals she had refused, and whose merit she had undervalued; but to her own more extensive information, he was the person to whom the whole family were indebted for the first of benefits, and whom she regarded herself with an interest, if not quite so tender, at least as reasonable and just as what Jane felt for Bingley. Her astonishment at his coming&#8212;at his coming to Netherfield, to Longbourn, and voluntarily seeking her again, was almost equal to what she had known on first witnessing his altered behavior in Derbyshire.</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA343.w.1.1.0"></a></div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA343"></a>
+<div id="block.374.1.0.box.102.192.1003.1611.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA343.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.374.1.1.box.104.1163.996.261.q.60">The color which had been driven from her face, returned for half a minute with an additional glow, and a smile of delight added lustre to her eyes, as she thought for that space of time, that his affection and wishes must still be unshaken. But she would not be secure.</p>
+<a id="ORIG-GBS.PA343.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.374.1.2.box.103.1440.997.85.q.60"><a id="GBS.PA343.w.1.2.0"></a>&quot;Let me first see how he behaves,&quot; said she; &quot;it will then be early enough for expectation.&quot;</p>
+<a id="ORIG-GBS.PA343.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.374.1.3.box.102.1533.998.270.q.60"><a id="GBS.PA343.w.1.3.0"></a>She sat intently at work striving to be composed, and without daring to lift up her eyes, till anxious curiosity carried them to the face of her sister, as the servant was approaching the door. Jane looked a little paler than usual, but more sedate than Elizabeth had expected. On the gentlemen&#39;s appearing, her color in<a id="ORIG-GBS.PA344.w.1.0.0"></a><span class="gtxt_body" id="para.375.1.0.box.171.190.996.168.q.60"><a id="GBS.PA344"></a><a id="GBS.PA344.w.0.0.0"></a><a id="GBS.PA344.w.1.0.0"></a>creased; yet she received them with tolerable ease, and with a propriety of behavior equally free from any symptom of resentment, or any unnecessary complaisance.</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA344.w.1.1.0"></a></div>
+
+<div style="display:none;"><a id="GBS.PA344.w.1.1.0.1"></a></div><div style="display:none;"><a id="GBS.PA344.w.1.2.0"></a></div><div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA344"></a>
+<div id="block.375.1.0.box.166.190.1002.1612.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA344.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.375.1.1.box.169.375.998.409.q.60">Elizabeth said as little to either as civility would allow, and sat down again to her work, with an eagerness which it did not often command. She had ventured only one glance at Darcy. He looked serious as usual, and, she thought, more as he had been used to look in Hertfordshire, than as she had seen him at Pemberley. But, perhaps, he could not in her mother&#39;s presence be what he was before her uncle and aunt. It was a painful, but not an improbable, conjecture.</p>
+<a id="ORIG-GBS.PA344.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.375.1.2.box.167.792.1001.307.q.60">Bingley she had likewise seen for an instant, and in that short period saw him looking both pleased and embarrassed. He was received by Mrs. Bennet with a degree of civility which made her two daughters ashamed, especially when contrasted with the cold and ceremonious politeness of her curtsey and address of his friend.</p>
+<a id="ORIG-GBS.PA344.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.375.1.3.box.166.1115.1001.224.q.60"><a id="GBS.PA344.w.1.3.0"></a>Elizabeth particularly, who knew that her mother owed to the latter the preservation of her favorite daughter from irremediable infamy, was hurt and distressed to a most painful degree by a distinction so ill-applied.</p>
+<a id="ORIG-GBS.PA344.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.375.1.4.box.166.1347.1002.455.q.60"><a id="GBS.PA344.w.1.4.0"></a>Darcy, after inquiring of her how Mr. and Mrs. Gardiner did&#8212;a question which she could not answer without confusion&#8212;said scarcely anything. He was not seated by her; perhaps that was the reason of his silence; but it had not been so in Derbyshire. There he had talked to her friends, when he could not to herself. But now several minutes elapsed, without bringing the sound of his voice; and when occasionally, unable to resist the impulse of curiosity, she raised her eyes to his face, she as often found him looking at Jane<a id="ORIG-GBS.PA345.w.1.0.0"></a><span class="gtxt_body" id="para.376.1.0.box.141.201.998.178.q.60"><a id="GBS.PA345"></a><a id="GBS.PA345.w.0.0.0"></a><a id="GBS.PA345.w.1.0.0"></a>
+as at herself, and frequently on no object but the ground. More thoughtfulness, and less anxiety to please than when they last met, were plainly expressed. She was disappointed, and angry with herself for being so.</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA345.w.1.1.0"></a></div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA345"></a>
+<div id="block.376.1.0.box.139.201.1002.1616.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA345.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.376.1.1.box.141.387.1000.84.q.60">&quot;Could I expect it to be otherwise!&quot; said she. &quot;Yet why did he come?&quot;</p>
+<a id="ORIG-GBS.PA345.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.376.1.2.box.142.480.999.131.q.60"><a id="GBS.PA345.w.1.2.0"></a>She was in no humor for conversation with anyone but himself; and to him she had hardly courage to speak.</p>
+<a id="ORIG-GBS.PA345.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.376.1.3.box.186.619.952.39.q.60"><a id="GBS.PA345.w.1.3.0"></a>She inquired after his sister, but could do no more.</p>
+<a id="ORIG-GBS.PA345.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.376.1.4.box.142.665.996.76.q.50"><a id="GBS.PA345.w.1.4.0"></a>&quot;It is a long time, Mr. Bingley, since you went away,&quot; said Mrs. Bennet.</p>
+<a id="ORIG-GBS.PA345.w.1.5.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.376.1.5.box.142.757.999.687.q.60"><a id="GBS.PA345.w.1.5.0"></a>He readily agreed to it. &quot;I began to be afraid you would never come back again. People <span style="font-style:italic;">did </span>say, you meant to quit the place entirely at Michaelmas; but, however, I hope it is not true. A great many changes have happened in the neighborhood since you went away. Miss Lucas is married and settled. And one of my own daughters. I suppose you have heard of it; indeed, you must have seen it in the papers. It was in the Times and the Courier, I know; though it was not put in as it ought to be. It only said, &#39;Lately, George Wickham, Esq., to Miss Lydia Bennet,&#39; without there being a syllable said of her father, or the place where she lived, or anything. It was my brother Gardiner&#39;s drawing up too, and I wonder how he came to make such an awkward business of it. Did you see it?&quot;</p>
+<a id="ORIG-GBS.PA345.w.1.6.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.376.1.6.box.140.1452.998.132.q.50"><a id="GBS.PA345.w.1.6.0"></a>Bingley replied that he did, and made his congratulations. Elizabeth dared not lift up her eyes. How Mr. Darcy looked, therefore, she could not tell.</p>
+<a id="ORIG-GBS.PA345.w.1.7.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.376.1.7.box.139.1592.999.225.q.60"><a id="GBS.PA345.w.1.7.0"></a>&quot;It is a delightful thing, to be sure, to have a daughter well married,&quot; continued her mother; &quot;but, at the same time, Mr. Bingley, it is very hard to have her taken away from me. They are gone down to Newcastle, a place quite northward, it seems, and there they<a id="ORIG-GBS.PA346.w.1.0.0"></a><span class="gtxt_body" id="para.377.1.0.box.133.190.1004.222.q.60"><a id="GBS.PA346"></a><a id="GBS.PA346.w.0.0.0"></a><a id="GBS.PA346.w.1.0.0"></a>
+are to stay I do not know how long. His regiment is there; for I suppose you have heard of his leaving the &#8213;&#8213;&#8213; shire, and of his being gone into the regulars. Thank Heaven! he has <span style="font-style:italic;">some </span>friends, though, perhaps, not so many as he deserves.&quot;</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA346.w.1.1.0"></a></div>
+
+<div style="display:none;"><a id="GBS.PA346.w.1.1.0.1"></a></div><div style="display:none;"><a id="GBS.PA346.w.1.2.0"></a></div><div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA346"></a>
+<div id="block.377.1.0.box.126.190.1011.1608.q.60" class="gtxt_body">
+<a id="ORIG-GBS.PA346.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.377.1.1.box.133.421.1003.307.q.60">Elizabeth, who knew this to be levelled at Mr. Darcy, was in such misery of shame that she could hardly keep her seat. It drew from her, however, the exertion of speaking, which nothing else had so effectually done before; and she asked Bingley whether he meant to make any stay in the country at present. A few weeks, he believed.</p>
+<a id="ORIG-GBS.PA346.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.377.1.2.box.132.744.1001.223.q.60">&quot;When you have killed all your own birds, Mr. Bingley,&quot; said her mother, &quot;I beg you will come here, and shoot as many as you please, on Mr. Bennet&#39;s manor. I am sure he will be vastly happy to oblige you, and will save all the best of the covies for you.&quot;</p>
+<a id="ORIG-GBS.PA346.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.377.1.3.box.130.975.1000.315.q.60"><a id="GBS.PA346.w.1.3.0"></a>Elizabeth&#39;s misery increased at such unnecessary, such officious attention! Were the same fair prospect to arise at present as had flattered them a year ago, everything, she was persuaded, would be hastening to the same vexatious conclusion. At that instant she felt that years of happiness could not make Jane or herself amends for moments of such painful confusion.</p>
+<a id="ORIG-GBS.PA346.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.377.1.4.box.126.1297.1000.224.q.60"><a id="GBS.PA346.w.1.4.0"></a>&quot;The first wish of my heart,&quot; said she to herself, &quot;is never more to be in company with either of them. Their society can afford no pleasure that will atone for such wretchedness as this! Let me never see either one or the other again!&quot;</p>
+<a id="ORIG-GBS.PA346.w.1.5.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.377.1.5.box.126.1529.999.269.q.60"><a id="GBS.PA346.w.1.5.0"></a>Yet the misery, for which years of happiness were to offer no compensation, received soon afterwards material relief from observing how much the beauty of her sister rekindled the admiration of her former lover. When first he came in, he had spoken to her but little, but every five minutes seemed to be giving her more of<a id="ORIG-GBS.PA347.w.1.0.0"></a><span class="gtxt_body" id="para.378.1.0.box.145.211.999.308.q.60"><a id="GBS.PA347"></a><a id="GBS.PA347.w.0.0.0"></a><a id="GBS.PA347.w.1.0.0"></a>
+his attention. He found her as handsome as she had been last year,&#8212;as good-natured and as unaffected, though not quite so chatty. Jane was anxious that no difference should be perceived in her at all, and was really persuaded that she talked as much as ever. But her mind was so busily engaged that she did not always know when she was silent.</span></p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA347.w.1.1.0"></a></div>
+
+<div class="flow" style="">
+<a class="page" id="ORIG-GBS.PA347"></a>
+<div id="block.378.1.0.box.139.211.1005.1195.q.60" class="gtxt_body" style="margin-bottom: 1.5em;">
+<a id="ORIG-GBS.PA347.w.1.1.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.378.1.1.box.144.536.999.175.q.60">When the gentlemen rose to go away, Mrs. Bennet was mindful of her intended civility, and they were invited and engaged to dine at Longbourn in a few days&#39; time.</p>
+<a id="ORIG-GBS.PA347.w.1.2.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.378.1.2.box.141.720.1000.270.q.50"><a id="GBS.PA347.w.1.2.0"></a>&quot;You are quite a visit in my debt, Mr. Bingley,&quot; she added; &quot;for when you went to town last winter you promised to take a family dinner with us as soon as you returned. I have not forgot, you see; and I assure you I was very much disappointed that you did not come back and keep your engagement.&quot;</p>
+<a id="ORIG-GBS.PA347.w.1.3.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.378.1.3.box.140.998.999.131.q.60"><a id="GBS.PA347.w.1.3.0"></a>Bingley looked a little silly at this reflection, and said something of his concern at having been prevented by business. They then went away.</p>
+<a id="ORIG-GBS.PA347.w.1.4.0"></a><p class="gtxt_body" style="text-indent:1em;" id="para.378.1.4.box.139.1136.999.270.q.60"><a id="GBS.PA347.w.1.4.0"></a>Mrs. Bennet had been strongly inclined to ask them to stay and dine there that day, but, though she always kept a very good table, she did not think anything less than two courses could be good enough for a man: on whom she had such anxious designs, or satisfy the appetite and pride of one who had ten thousand a year.</p>
+</div>
+</div><div style="display:none;"><a id="GBS.PA347.w.2.0.0"></a></div>
+
+<div style="display:none;"><a id="GBS.PA347.w.2.0.0.1"></a></div></body></html>

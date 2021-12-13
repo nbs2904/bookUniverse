@@ -3,8 +3,6 @@ module.exports = (app) => {
 
     const router = require("express").Router();
 
-    // Create new Genre
-    // TODO https://www.bezkoder.com/node-express-mongodb-crud-rest-api/
     router.post("/", genre.create);
     router.get("/", genre.findAll);
 

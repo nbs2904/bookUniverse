@@ -1,10 +1,12 @@
 const path = require("path");
-const reqPath = path.join(__dirname, "../models/bookGenre.model");
+const reqPathBookGenre = path.join(__dirname, "../models/bookGenre.model");
+const reqPathGenre = path.join(__dirname, "../models/genre.model");
 
 // logger
 const { logger } = require("../../config/logger");
 
-const BookGenre = require(reqPath);
+const BookGenre = require(reqPathBookGenre);
+const Genre = require(reqPathGenre);
 
 // TODO JsDoc
 exports.create = (req, res) => {
@@ -35,26 +37,36 @@ exports.create = (req, res) => {
         });
 };
 
-exports.findByBookId = (req, res) => {
+exports.findByBookId = async (req, res) => {
     const bookId = req.params.bookId;
 
-    BookGenre.find({bookId}, (err, bookGenres) => {
-        if(err){
+    let genreNameArray = [];
+
+    await BookGenre.find({bookId}).exec()
+        .then(async (bookGenres) => {
+            for (const bookGenre of bookGenres) {
+                await Genre.findById(bookGenre.genreId).exec()
+                    .then((genre) => {
+                        genreNameArray.push(genre.name);
+                    })
+                    .catch((err) => {
+                        logger.error("Some error occurred while getting the genre with id: " + bookGenre.genreId);
+                        logger.error(err);
+                        
+                        res.status(500).send({
+                            message: err.message || "Some error occured while getting a genre."
+                        });
+                    });
+            }
+        })
+        .catch((err) => {
             logger.error("Some error occurred while getting all BookGenres:", err);
             res.status(500).send({
                 message: err.message || "Some error occured while getting all bookGenres."
             });
-        } else {
-            let bookGenreMap = {};
-    
-            bookGenres.forEach(bookGenre => {
-                bookGenreMap[bookGenre._id] = bookGenre;
-            });
-            
-            logger.info("All genres were received.");
-            res.status(200).send(bookGenreMap);
-        }
-    });
+        });
+        
+    res.status(200).send(genreNameArray);
 };
 
 exports.findByGenreId = (req, res) => {

@@ -1,0 +1,112 @@
+/**/
+p {
+    margin-top: 0.75em;
+    text-align: justify;
+    margin-bottom: 0.75em
+    }
+p.bold {
+    text-align: center;
+    font-weight: bold
+    }
+p.bold2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%
+    }
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    /* all headings centered */
+    clear: both
+    }
+h1 span, h2 span {
+    display: block;
+    text-align: center
+    }
+#id1 {
+    font-size: smaller
+    }
+hr {
+    width: 33%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 33.5%;
+    margin-right: 33.5%;
+    clear: both
+    }
+body {
+    margin-left: 10%;
+    margin-right: 10%
+    }
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: none;
+    text-align: right
+    }
+.pagenum {
+    /* uncomment the next line for invisible page numbers */
+    /*  visibility: hidden;  */
+    font-size: smaller;
+    text-align: right;
+    text-indent: 0
+    }
+/* page numbers */
+.center {
+    text-align: center
+    }
+.smaller {
+    font-size: smaller
+    }
+.smcap {
+    font-variant: small-caps
+    }
+.mynote {
+    background-color: #DDE;
+    color: black;
+    padding: 0.5em;
+    margin-left: 20%;
+    margin-right: 20%
+    }
+/* colored box for notes at beginning of file */
+.right {
+    text-align: right
+    }
+.left {
+    text-align: left
+    }
+.s3 {
+    display: inline;
+    margin-left: 3em
+    }
+.poem {
+    display: inline-block;
+    text-align: left
+    }
+.poem br {
+    display: none
+    }
+.poem .stanza {
+    margin: 1em 0 1em 0
+    }
+.poem div {
+    margin: 0;
+    padding-left: 3em;
+    text-indent: -3em
+    }
+.poem div.i1 {
+    margin-left: 1em
+    }
+.poem div.i2 {
+    margin-left: 2em
+    }
+.poem div.i3 {
+    margin-left: 3em
+    }
+.poem div.i6 {
+    margin-left: 6em
+    }
+.poem div.i12 {
+    margin-left: 12em
+    }
+/**/

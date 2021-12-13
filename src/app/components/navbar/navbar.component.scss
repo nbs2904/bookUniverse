@@ -1,0 +1,24 @@
+.imgActive{
+    filter: brightness(1) !important;
+}
+
+.imgNotActive{
+    filter: brightness(0.5);
+}
+
+.navbar{
+    z-index: 5;
+}
+
+.navbar-nav{
+    margin-left: auto;
+
+    li{
+        margin-left:20px;
+        margin-right:20px;
+    };
+}
+
+.navbar-brand{
+    margin-left: 20px;
+}

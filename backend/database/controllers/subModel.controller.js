@@ -40,7 +40,7 @@ exports.findById = (req, res) => {
     SubModel.findById(id)
         .then((data) => {
             if(!data) {
-                logger.error("SubModel could not be found.");
+                logger.warn("SubModel could not be found.");
                 res.status(404).send({message: `SubModel with id ${id} could not be found.`});
             } else {
                 logger.info("SubModel was found.");
@@ -60,15 +60,9 @@ exports.findAll = (req, res) => {
             res.status(500).send({
                 message: err.message || "Some error occured while getting all subModels."
             });
-        } else {
-            let subModelMap = {};
-    
-            subModels.forEach(subModel => {
-                subModelMap[subModel._id] = subModel;
-            });
-            
+        } else {            
             logger.info("All subModels were received.");
-            res.status(200).send(subModelMap);
+            res.status(200).send(subModels);
         }
     });
 };

@@ -32,6 +32,7 @@ exports.create = (req, res) => {
     user.save(user)
         .then((data) => {
             logger.info("User was created.");
+            data.pswd = "";
             res.status(201).send(data);
         })
         .catch((err) => {
@@ -48,9 +49,10 @@ exports.findById = (req, res) => {
     User.findById(id)
         .then((data) => {
             if(!data) {
-                logger.error("User could not be found.");
+                logger.warn("User could not be found.");
                 res.status(404).send({message: `User with id ${id} could not be found.`});
             } else {
+                data.pswd = "";
                 logger.info("User was found.");
                 res.status(200).send(data);
             }
@@ -122,16 +124,15 @@ exports.update = (req, res) => {
     User.findByIdAndUpdate(id, req.body, {useFindAndModify: false})
         .then((data) => {
             if(!data) {
-                logger.error(`Could not update update entry with id: ${id}.`);
+                logger.warn(`Could not update update entry with id: ${id}.`);
                 res.status(404).send({
                     message: `Cannot update user entry with id: ${id}.`
                 });
 
             } else {
                 logger.info("User entry was successfully updated.");
-                res.send({
-                    message: "User entry was successfully updated."
-                });
+                data.pswd = "";
+                res.status(200).send(data);
             }
         })
         .catch((err) => {
@@ -139,5 +140,53 @@ exports.update = (req, res) => {
             res.status(500).send({
                 message: `Error updating user entry with id: ${id}`
             });
+        });
+};
+
+exports.find = (req, res) => {
+    
+    const email = req.params.email;
+    const pswd = req.params.pswd;
+
+    const query = {email, pswd};
+
+    User.findOne(query)
+        .then((data) => {
+            if(data){
+                logger.info("User was found");
+                if(data?.pswd) data.pswd = "";
+                res.status(200).send(data);
+            } else {
+                logger.warn("User was not found.");
+                res.status(404).send({message: "User was not found"});
+            }
+
+        })
+        .catch((err) => {
+            logger.error("Something went wrong:", err);
+            res.status(400).send({message: "User was not found."});
+        });
+};
+
+exports.findByEmail = (req, res) => {
+    
+    const email = req.params.email;
+
+    const query = {email};
+
+    User.find(query)
+        .then((data) => {
+            if(data.length > 0) {
+                logger.info("User was found");
+                res.status(200).send(true);
+            } else {
+                logger.warn("User was not found.");
+                res.status(404).send({message: "User was not found"});
+            }
+
+        })
+        .catch((err) => {
+            logger.error("Something went wrong:", err);
+            res.status(400).send({message: "User was not found."});
         });
 };

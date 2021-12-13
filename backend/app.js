@@ -13,7 +13,6 @@ app.use(express.json());
 const db = require("./database/db.config");
 
 // routes
-// TODO add all routers
 require("./routes/genre.routes")(app);
 require("./routes/subModel.routes")(app);
 require("./routes/paymentMethod.routes")(app);

@@ -40,7 +40,7 @@ exports.findById = (req, res) => {
     PaymentMethod.findById(id)
         .then((data) => {
             if(!data) {
-                logger.error("PaymentMethod could not be found.");
+                logger.warn("PaymentMethod could not be found.");
                 res.status(404).send({message: `PaymentMethod with id ${id} could not be found.`});
             } else {
                 logger.info("PaymentMethod was found.");
@@ -60,15 +60,9 @@ exports.findAll = (req, res) => {
             res.status(500).send({
                 message: err.message || "Some error occured while getting all paymentMethods."
             });
-        } else {
-            let paymentMethodMap = {};
-    
-            paymentMethods.forEach(paymentMethod => {
-                paymentMethodMap[paymentMethod._id] = paymentMethod;
-            });
-            
+        } else {            
             logger.info("All paymentMethods were received.");
-            res.status(200).send(paymentMethodMap);
+            res.status(200).send(paymentMethods);
         }
     });
 };

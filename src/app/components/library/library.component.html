@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="container" *ngIf="borrowedBooks.length > 0 && gotResponse == true">
+    <div class="row" id="outter-row">
+        <div class="col-xl-4 col-lg-6 col-sm-12 outter-box" *ngFor="let borrowedBook of borrowedBooks; index as i">
+            <div class="row book-box"  routerLink="/library/{{borrowedBook.book._id}}">
+                <div class="col-sm-6 col-12 book-cover p-4" align="center">
+                    <img src="/assets/img/{{borrowedBook.book.coverUrl}}" alt="{{ borrowedBook.book.coverUrl }}" width="150">
+                </div>
+                <div class="col-sm-6 col-12 book-content p-4">
+                    <h2 class="title">{{ borrowedBook.book.title }}</h2>
+                    <h4 class="subtitle" *ngIf="borrowedBook.book.subtitle">{{borrowedBook.book.subtitle }}</h4>
+                    <br>
+                    <a *ngFor="let author of borrowedBook.book.authors; index as k">{{(!k ? "" : ", ") + author}}</a>
+                    <br><br>
+                    <p>{{ borrowedBook.book.language }}</p>
+                    <a *ngFor="let genre of borrowedBook.book.genres; index as k">{{(!k ? "" : ", ") + genre}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="emptyLibrary" *ngIf="borrowedBooks.length < 1 && gotResponse == true">
+  <h3>You don't seem to have any books in your library yet.</h3>
+  <h4>Check out our catalogue and borrow some books:</h4>
+  <br>
+  <button class="btn btn-primary" type="submit" routerLink="/catalogue">Catalogue</button>
+</div>
+    

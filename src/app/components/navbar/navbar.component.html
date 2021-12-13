@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+  <a class="navbar-brand" routerLink="/library" routerLinkActive="active">Book Universe</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/catalogue" routerLinkActive="active">Catalogue</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/library" routerLinkActive="active">Library</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/profile" routerLinkActive="active"><img  routerLinkActive="imgActive" class="imgNotActive" src="/assets/img/person-circle.svg" alt="profile" height="30"></a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5">
+    <div class="row">
+        <button class="btn btn-secondary" type="submit" (click)="extend()">Extend Duration</button>
+        <button class="btn btn-secondary" type="submit" (click)="returnBook()">Return Book</button>
+        <button class="btn btn-secondary" type="submit" (click)="readBook()">{{ borrowedEntry.progress == 0 ? "Start Reading" : "Continue Reading" }}</button>
+    </div>
+    <br>
+    <div class="row row-cols-2">
+        <div class="col-md-6 col-12 book-cover p-4" align="center">
+            <img src="/assets/img/{{borrowedEntry.book.coverUrl}}" alt="{{ borrowedEntry.book.coverUrl }}" height="400">
+        </div>
+        <div class="col-md-6 col-12 book-content p-4">
+            <h2 *ngIf="borrowedEntry.book.title">{{borrowedEntry.book.title}}</h2>
+            <h4 *ngIf="borrowedEntry.book.subtitle">{{ borrowedEntry.book.subtitle }}</h4>
+            <br>
+            <ng-container *ngIf="borrowedEntry.book.authors">
+                <p *ngFor="let author of borrowedEntry.book.authors">{{ author }}</p>
+            </ng-container>
+            <p>Borrowed from {{ borrowedEntry.startDateFormatted }} until {{ borrowedEntry.endDateFormatted }}</p>
+            <p>Progress: {{ borrowedEntry.progress }}</p>
+
+        </div>
+    </div>
+</div>

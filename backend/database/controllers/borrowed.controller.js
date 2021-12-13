@@ -1,13 +1,18 @@
 const path = require("path");
-const reqPath = path.join(__dirname, "../models/borrowed.model");
+
+const reqPathBorrowed = path.join(__dirname, "../models/borrowed.model");
+const reqPathUser = path.join(__dirname, "../models/user.model.js");
 
 // logger
 const { logger } = require("../../config/logger");
 
-const Borrowed = require(reqPath);
+const Borrowed = require(reqPathBorrowed);
+const User = require(reqPathUser);
+
+const { ObjectId } = require("mongoose").Types;
 
 // TODO JsDoc
-exports.create = (req, res) => {
+exports.create = async (req, res) => {
     // validate request
     if(!req.body?.userId || !req.body?.bookId || !req.body?.startDate || !req.body?.endDate || (!req.body?.progress && req.body?.progress != 0)){
         logger.error("At least one required element is empty:");
@@ -27,7 +32,7 @@ exports.create = (req, res) => {
     });
 
     // Save Genre in the database
-    borrowed.save(borrowed)
+    await borrowed.save(borrowed)
         .then((data) => {
             logger.info("Borrowed entry was created.");
             res.status(201).send(data);
@@ -40,46 +45,106 @@ exports.create = (req, res) => {
         });
 };
 
-exports.findById = (req, res) => {
-    const id = req.params.id;
+exports.findByUserId = (req, res) => {
+    const userId = ObjectId(req.params.userId);
 
-    Borrowed.findById(id)
-        .then((data) => {
-            if(!data) {
-                logger.error("Borrowed entry could not be found.");
-                res.status(404).send({message: `Borrowed entry with id ${id} could not be found.`});
-            } else {
-                logger.info("Borrowed entry was found.");
-                res.status(200).send(data);
-            }
-        })
-        .catch(((err) => {
+    User.aggregate([
+        {$match: {$expr: {$eq: [userId, "$_id"]}}},
+        {$lookup: {
+            from: "borroweds",
+            as: "borrowed",
+            let: {user_id: "$_id"},
+            pipeline: [
+                {$match: {$and: [
+                    {$expr: {$eq: ["$$user_id", "$userId"]}},
+                    {startDate: {$lte: new Date()}},
+                    {endDate: {$gte: new Date()}}  
+                ]}},
+                {$lookup: {
+                    from: "books",
+                    as: "books",
+                    let: {borrowed_bookId: "$bookId"},
+                    pipeline: [
+                        {$match: {$and: [
+                            {$expr: {$eq: ["$$borrowed_bookId", "$_id"]}}                      
+                        ]}},
+                        {$lookup: {
+                            from: "bookgenres",
+                            as: "bookgenres",
+                            let: {book_id: "$_id"},
+                            pipeline: [
+                                {$match: {$expr: {$and: [{$eq: ["$bookId", "$$book_id"]}]}}},
+                                {$lookup: {
+                                    from: "genres",
+                                    as: "genres",
+                                    let: {bookGenre_genreId: "$genreId"},
+                                    pipeline: [
+                                        {$match: {$expr: {$and: [{$eq: ["$_id", "$$bookGenre_genreId"]}]}}}
+                                    ]
+                                }},
+                                {$project: {
+                                    genres: {
+                                        $map: {
+                                            input: "$genres",
+                                            as: "genres",
+                                            in: "$$genres.name"
+                                        }
+                                    }
+                                }}
+                            ]
+                        }},
+                        {$project: {
+                            _id: 1,
+                            title: 1,
+                            subtitle: 1,
+                            pageCount: 1,
+                            ISBN13: 1,
+                            coverUrl: 1,
+                            authors: 1,
+                            language: 1,
+                            description: 1,
+                            genres: {
+                                $map: {
+                                    input: "$bookgenres",
+                                    as: "bookgenres",
+                                    in: {
+                                        $reduce: {
+                                            input: "$$bookgenres.genres",
+                                            initialValue: "",
+                                            in: {$concat: ["$$value", "$$this"]}
+                                        }
+                                    }
+                                }
+                            }
+                        }}
+                    ]
+                }},
+                {$project: {
+                    _id: 0,
+                    startDate: "$startDate",
+                    endDate: "$endDate",
+                    book: {$arrayElemAt: ["$books", 0]}
+                }}
+            ]
+        }},
+        {$project: {
+            _id: 0,
+            borrowed: "$borrowed"
+        }}
+    ], (err, data) => {
+        if(err) {
             logger.error("Request failed:", err);
             res.status(500).send({message: "Something went wrong with retrieving the borrowed entry."});
-        }));
-};
-
-exports.findByUserId = (req, res) => {
-    const userId = req.params.userId;
-
-    Borrowed.find({userId}, (err, borrowedList) => {
-        if(err){
-            logger.error("Some error occurred while getting all borrowed entries:", err);
-            res.status(500).send({
-                message: err.message || "Some error occured while getting all borrowed entries."
-            });
+        } else if(!data) {
+            logger.warn("Borrowed entry could not be found.");
+            res.status(404).send({message: `Borrowed entry with id ${userId} could not be found.`});
         } else {
-            let borrowedMap = {};
-    
-            borrowedList.forEach(borrowed => {
-                borrowedMap[borrowed._id] = borrowed;
-            });
-            
-            logger.info("All borrowed entries were received.");
-            res.status(200).send(borrowedMap);
+            logger.info("Borrowed entry was found.");
+            res.status(200).send(data[0].borrowed);
         }
     });
 };
+
 
 exports.update = (req, res) => {
     if(!req.body) {
@@ -106,6 +171,7 @@ exports.update = (req, res) => {
             });
         }
     }
+
     if("progress" in req.body){
         if(req.body.progress < 0){
             return res.status(400).send({
@@ -117,7 +183,7 @@ exports.update = (req, res) => {
     Borrowed.findByIdAndUpdate(id, req.body, {useFindAndModify: false})
         .then((data) => {
             if(!data) {
-                logger.error(`Could not update update entry with id: ${id}.`);
+                logger.warn(`Could not update update entry with id: ${id}.`);
                 res.status(404).send({
                     message: `Cannot update borrowed entry with id: ${id}.`
                 });
@@ -135,4 +201,228 @@ exports.update = (req, res) => {
                 message: `Error updating borrowed entry with id: ${id}`
             });
         });
+};
+
+exports.borrowedBookIds = (req, res) => {
+    const userId = ObjectId(req.params.userId);
+    
+    User.aggregate([
+        {$match: {"_id": userId}},
+        {$lookup: {
+            from: "borroweds",
+            as: "borrowed",
+            let: {user_id: "$_id"},
+            pipeline: [
+                {$match: {$and: [
+                    {$expr: {$eq: ["$userId", "$$user_id"]}},
+                    {startDate: {$lte: new Date()}},
+                    {endDate: {$gte: new Date()}}
+                ]}},
+                {$project: {
+                    _id: 0,
+                    bookId: 1
+                }}
+            ]
+
+        }},
+        {$project: {
+            _id: 0,
+            borrowed: {
+                $map: {
+                    input: "$borrowed",
+                    as: "borrowed",
+                    in: "$$borrowed.bookId"
+                }
+            }
+        }}
+    ], (err, data) => {
+        if(err) {
+            logger.error("Request failed:", err);
+            res.status(500).send({message: "Something went wrong with retrieving the borrowed book ids."});
+        } else if(!data) {
+            logger.warn("No books are currently borrowed");
+            res.status(404).send({message: "User has not any books borrowed"});
+        } else {
+            logger.info("Borrowed book(s) were found.");
+            res.status(200).send(data[0].borrowed);
+        }
+    });
+};
+
+exports.borrowedBookInfo = (req, res) => {
+    const userId = ObjectId(req.params.userId);
+    const bookId = ObjectId(req.params.bookId);
+    
+    Borrowed.aggregate([
+        {$match: {$and: [
+            {userId: userId},
+            {bookId: bookId},
+            {startDate: {$lte: new Date()}},
+            {endDate: {$gte: new Date()}}
+        ]}},
+        {$lookup: {
+            from: "books",
+            as: "books",
+            let: {book_id: "$bookId"},
+            pipeline: [                
+                {$match: {$expr: {$and: [{$eq: ["$_id", "$$book_id"]}]}}},
+                {$lookup: {
+                    from: "bookgenres",
+                    as: "bookgenres",
+                    let: {book_id: "$_id"},
+                    pipeline: [
+                        {$match: {$expr: {$and: [{$eq: ["$bookId", "$$book_id"]}]}}},
+                        {$lookup: {
+                            from: "genres",
+                            as: "genres",
+                            let: {bookGenre_genreId: "$genreId"},
+                            pipeline: [
+                                {$match: {$expr: {$and: [{$eq: ["$_id", "$$bookGenre_genreId"]}]}}}
+                            ]
+                        }},
+                        {$project: {
+                            genres: {
+                                $map: {
+                                    input: "$genres",
+                                    as: "genres",
+                                    in: "$$genres.name"
+                                }
+                            }
+                        }}
+                    ]
+                }},
+                {$project: {
+                    _id: 1,
+                    title: 1,
+                    subtitle: 1,
+                    pageCount: 1,
+                    ISBN13: 1,
+                    coverUrl: 1,
+                    authors: 1,
+                    language: 1,
+                    description: 1,
+                    genres: {
+                        $map: {
+                            input: "$bookgenres",
+                            as: "bookgenres",
+                            in: {
+                                $reduce: {
+                                    input: "$$bookgenres.genres",
+                                    initialValue: "",
+                                    in: {$concat: ["$$value", "$$this"]}
+                                }
+                            }
+                        }
+                    }
+                }}
+            ]
+        }},
+        {$project: {
+            _id: 1,
+            startDate: 1,
+            endDate: 1,
+            progress: 1,
+            book: {$arrayElemAt: ["$books", 0]}
+        }}
+
+    ], (err, data) => {
+        if(err) {
+            logger.error("Request failed:", err);
+            res.status(500).send({message: "Something went wrong with retrieving the borrowed book info."});
+        } else if(!data) {
+            logger.warn("This book has not been currently borrowed by this user.");
+            res.status(404).send({message: "This book has not been currently borrowed by this user."});
+        } else {
+            logger.info("Borrowed book info was found.");
+            res.status(200).send(data[0]);
+        }
+    });
+};
+
+exports.borrowedBookInfoByEntryId = (req, res) => {
+    const id = ObjectId(req.params.id);
+    
+    Borrowed.aggregate([
+        {$match: {$and: [
+            {_id: id},
+            {startDate: {$lte: new Date()}},
+            {endDate: {$gte: new Date()}}
+        ]}},
+        {$lookup: {
+            from: "books",
+            as: "books",
+            let: {book_id: "$bookId"},
+            pipeline: [                
+                {$match: {$expr: {$and: [{$eq: ["$_id", "$$book_id"]}]}}},
+                {$lookup: {
+                    from: "bookgenres",
+                    as: "bookgenres",
+                    let: {book_id: "$_id"},
+                    pipeline: [
+                        {$match: {$expr: {$and: [{$eq: ["$bookId", "$$book_id"]}]}}},
+                        {$lookup: {
+                            from: "genres",
+                            as: "genres",
+                            let: {bookGenre_genreId: "$genreId"},
+                            pipeline: [
+                                {$match: {$expr: {$and: [{$eq: ["$_id", "$$bookGenre_genreId"]}]}}}
+                            ]
+                        }},
+                        {$project: {
+                            genres: {
+                                $map: {
+                                    input: "$genres",
+                                    as: "genres",
+                                    in: "$$genres.name"
+                                }
+                            }
+                        }}
+                    ]
+                }},
+                {$project: {
+                    _id: 1,
+                    title: 1,
+                    subtitle: 1,
+                    pageCount: 1,
+                    ISBN13: 1,
+                    coverUrl: 1,
+                    authors: 1,
+                    language: 1,
+                    description: 1,
+                    genres: {
+                        $map: {
+                            input: "$bookgenres",
+                            as: "bookgenres",
+                            in: {
+                                $reduce: {
+                                    input: "$$bookgenres.genres",
+                                    initialValue: "",
+                                    in: {$concat: ["$$value", "$$this"]}
+                                }
+                            }
+                        }
+                    }
+                }}
+            ]
+        }},
+        {$project: {
+            _id: 1,
+            startDate: 1,
+            endDate: 1,
+            progress: 1,
+            book: {$arrayElemAt: ["$books", 0]}
+        }}
+
+    ], (err, data) => {
+        if(err) {
+            logger.error("Request failed:", err);
+            res.status(500).send({message: "Something went wrong with retrieving the borrowed book info."});
+        } else if(!data) {
+            logger.warn("This book has not been currently borrowed by this user.");
+            res.status(404).send({message: "This book has not been currently borrowed by this user."});
+        } else {
+            logger.info("Borrowed book info was found.");
+            res.status(200).send(data[0]);
+        }
+    });
 };

@@ -41,15 +41,9 @@ exports.findAll = (req, res) => {
             res.status(500).send({
                 message: err.message || "Some error occured while getting all genres."
             });
-        } else {
-            let genreMap = {};
-    
-            genres.forEach(genre => {
-                genreMap[genre._id] = genre;
-            });
-            
+        } else {            
             logger.info("All genres were received.");
-            res.status(200).send(genreMap);
+            res.status(200).send(genres);
         }
     });
 };

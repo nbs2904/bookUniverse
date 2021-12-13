@@ -63,7 +63,7 @@ exports.delete = (req, res) => {
     UserGenre.findByIdAndRemove(id)
         .then((data) => {
             if(!data) {
-                logger.error(`Cannot delete userGenre entry with id: ${id}.`);
+                logger.warn(`Cannot delete userGenre entry with id: ${id}.`);
                 res.status(404).send({
                     message: `Cannot delete userGenre entry with id: ${id}.`
                 });

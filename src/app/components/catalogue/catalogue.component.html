@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<!-- TODO Suchbar -->
+<div class="container">
+    <div *ngIf="gotResponse" class="row" id="outter-row">
+        <div class="col-xl-4 col-lg-6 col-sm-12 outter-box" *ngFor="let book of books; index as i">
+            <div class="row book-box"  routerLink="/catalogue/{{book._id}}">
+                <div class="col-sm-6 col-12 book-cover p-4" align="center">
+                    <img src="/assets/img/{{book.coverUrl}}" alt="{{ book.coverUrl }}" width="150">
+                </div>
+                <div class="col-sm-6 col-12 book-content p-4">
+                    <h2 class="title">{{ book.title }}</h2>
+                    <h4 class="subtitle" *ngIf="book.subtitle">{{ book.subtitle }}</h4>
+                    <br>
+                    <a *ngFor="let author of book.authors; index as k">{{(!k ? "" : ", ") + author}}</a>
+                    <br><br>
+                    <p>{{ book.language }}</p>
+                    <a *ngFor="let genre of book.genres; index as k">{{(!k ? "" : ", ") + genre}}</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
