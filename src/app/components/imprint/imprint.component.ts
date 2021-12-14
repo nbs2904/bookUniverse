@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+
+// TODO imprint on hover icons darstellen
 
 @Component({
-  selector: 'app-imprint',
-  templateUrl: './imprint.component.html',
-  styleUrls: ['./imprint.component.scss']
+    selector: "app-imprint",
+    templateUrl: "./imprint.component.html",
+    styleUrls: ["./imprint.component.scss"]
 })
 export class ImprintComponent implements OnInit {
+    imprintOpen = false;
 
-  constructor() { }
+    toggleImprint(){
+        this.imprintOpen = !this.imprintOpen;
+    }
 
-  ngOnInit() {
-  }
+    constructor() { }
+
+    ngOnInit() { }
 
 }

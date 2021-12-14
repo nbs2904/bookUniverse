@@ -10,7 +10,7 @@ const PORT = process.env.PORT;
 // middleware
 app.use(express.json());
 
-const db = require("./database/db.config");
+require("./database/db.config");
 
 // routes
 require("./routes/genre.routes")(app);
@@ -27,10 +27,16 @@ app.get("/", (req, res) => {
     res.send("Welcome to Node API");
 });
 
-app.listen(PORT || 3000, () => {
+const server  = app.listen(PORT || 3000, () => {    
     logger.info("App listening on port 3000.");
 });
 
-app.get("/getData", (req, res) => {
-    res.json({"message": "Hello World"});
-});
+function stop() {
+    server.close(() => {
+        logger.info("Server shutting down.");
+    });
+    server.getConnections.close;
+}
+
+module.exports = server;
+module.exports.stop = stop;

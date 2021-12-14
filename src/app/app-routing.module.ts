@@ -1,3 +1,4 @@
+import { ImprintComponent } from "./components/imprint/imprint.component";
 import { ReaderComponent } from "./components/reader/reader.component";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
@@ -20,6 +21,7 @@ const routes: Routes = [
     { path: "catalogue", component: CatalogueComponent, canActivate: [AuthGuard] },
     { path: "profile", component: ProfileComponent, canActivate: [AuthGuard] },
     { path: "reader/:borrowedId", component: ReaderComponent, canActivate: [AuthGuard] },
+    { path: "imprint", component: ImprintComponent },
     { path: "login", component: LoginComponent },
     { path: "signup", component: SignupComponent },
     { path: "", redirectTo: "login", pathMatch: "full" },

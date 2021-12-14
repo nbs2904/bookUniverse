@@ -8,6 +8,7 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { RootComponent } from "./components/root/root.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
+import { ImprintComponent } from "./components/imprint/imprint.component";
 import { ProfileComponent } from "./components/profile/profile.component";
 import { LibraryComponent } from "./components/library/library.component";
 import { CatalogueComponent } from "./components/catalogue/catalogue.component";
@@ -26,6 +27,7 @@ import { AuthGuard } from "./guards/auth.guard";
         AppComponent,
         RootComponent,
         NavbarComponent,
+        ImprintComponent,
         ProfileComponent,
         LibraryComponent,
         LibraryInfoComponent,
