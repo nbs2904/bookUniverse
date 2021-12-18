@@ -6,7 +6,11 @@ const { logger } = require("../../config/logger");
 
 const User = require(reqPath);
 
-// TODO JsDoc
+/**
+ * function to create a new user
+ * @param {object} req - request body
+ * @param {object} res - response which is sent back to server
+ */
 exports.create = (req, res) => {
     // validate request
     if(!req.body?.name || !req.body?.email || !req.body?.pswd || !req.body?.userName || !req.body?.dateOfBirth || !req.body?.paymentMethodId || !req.body?.country || !req.body?.subModelId){
@@ -43,12 +47,18 @@ exports.create = (req, res) => {
         });
 };
 
+/**
+ * retrieves one user from database, finds user by id
+ * @param {object} req -  request body
+ * @param {object} res - response body
+ * @returns user object
+ */
 exports.findById = (req, res) => {
     const id = req.params.id;
 
     User.findById(id)
         .then((data) => {
-            if(!data) {
+            if(data?.length === 0 || data === null) {
                 logger.warn("User could not be found.");
                 res.status(404).send({message: `User with id ${id} could not be found.`});
             } else {
@@ -63,6 +73,11 @@ exports.findById = (req, res) => {
         }));
 };
 
+/**
+ * updates user entry, if user updates the profile information
+ * @param {object} req - request body
+ * @param {object} res - reponse object
+ */
 exports.update = (req, res) => {
     if(!req.body) {
         logger.error("Data to update was empty:", req.body);
@@ -123,7 +138,7 @@ exports.update = (req, res) => {
 
     User.findByIdAndUpdate(id, req.body, {useFindAndModify: false})
         .then((data) => {
-            if(!data) {
+            if(data?.length === 0 || data === null) {
                 logger.warn(`Could not update update entry with id: ${id}.`);
                 res.status(404).send({
                     message: `Cannot update user entry with id: ${id}.`
@@ -143,6 +158,12 @@ exports.update = (req, res) => {
         });
 };
 
+/**
+ * retrieves one user from database, finds user by email and password
+ * @param {object} req - request body
+ * @param {object} res - response body
+ * @returns user object
+ */
 exports.find = (req, res) => {
     
     const email = req.params.email;
@@ -168,6 +189,12 @@ exports.find = (req, res) => {
         });
 };
 
+/**
+ * retrieves one user from database, finds user by email
+ * @param {object} req -  request body
+ * @param {object} res - response body
+ * @returns user object
+ */
 exports.findByEmail = (req, res) => {
     
     const email = req.params.email;

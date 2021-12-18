@@ -8,7 +8,12 @@ const { logger } = require("../../config/logger");
 const BookGenre = require(reqPathBookGenre);
 const Genre = require(reqPathGenre);
 
-// TODO JsDoc
+/**
+ * function to create a new bookGenre (only used in development stage)
+ * @param {object} req - request body
+ * @param {object} res - response which is sent back to server
+ * @returns 
+ */
 exports.create = (req, res) => {
     // validate request
     if(!req.body?.bookId || !req.body?.genreId){
@@ -36,7 +41,12 @@ exports.create = (req, res) => {
             });
         });
 };
-
+/**
+ * retrieves one bookGenre from database, finds it by Book id
+ * @param {object} req -  request body
+ * @param {object} res - response body
+ * @returns bookGenre object
+ */
 exports.findByBookId = async (req, res) => {
     const bookId = req.params.bookId;
 
@@ -68,7 +78,12 @@ exports.findByBookId = async (req, res) => {
         
     res.status(200).send(genreNameArray);
 };
-
+/**
+ * retrieves one bookGenre from database, finds it by Genre id
+ * @param {object} req -  request body
+ * @param {object} res - response body
+ * @returns bookGenre object
+ */
 exports.findByGenreId = (req, res) => {
     const genreId = req.params.genreId;
 

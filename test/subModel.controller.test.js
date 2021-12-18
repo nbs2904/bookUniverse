@@ -1,13 +1,12 @@
 const chai = require("chai");
 const chaiHttp = require("chai-http");
-const should = chai.should();
 
 const server = require("../backend/app");
 
+chai.should();
 chai.use(chaiHttp);
 
 describe("Submodel Controller", () => {
-
     it("Find all Submodels", (done) => {
         chai.request(server)
             .get("/api/subModel")

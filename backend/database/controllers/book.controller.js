@@ -8,7 +8,12 @@ const Book = require(reqPath);
 
 const { ObjectId } = require("mongoose").Types;
 
-// TODO JsDoc
+/**
+ * function to create a new book (only used in development stage)
+ * @param {object} req - request body
+ * @param {object} res - response which is sent back to server
+ * @returns 
+ */
 exports.create = (req, res) => {
     // validate request
     if(!req.body?.title || !req.body?.ISBN13 || !req.body?.authors || !req.body?.content){
@@ -44,6 +49,12 @@ exports.create = (req, res) => {
         });
 };
 
+/**
+ * function to get retrieve every book from database
+ * @param {object} req - request body
+ * @param {object} res - response which is sent back to server
+ * @return array of book objects
+ */
 exports.findAll = (req, res) => {
     Book.aggregate([
         {$lookup: {
@@ -108,6 +119,12 @@ exports.findAll = (req, res) => {
     });
 };
 
+/**
+ * retrieves one book from database, finds it by id
+ * @param {object} req -  request body
+ * @param {object} res - response body
+ * @returns book object
+ */
 exports.findById = (req, res) => {
     const id = ObjectId(req.params.id);
 
@@ -166,7 +183,7 @@ exports.findById = (req, res) => {
         if(err) {
             logger.error("Request failed:", err);
             res.status(500).send({message: "Something went wrong with retrieving the book."});
-        } else if(!data) {
+        } else if(data?.length === 0 || data === null) {
             logger.warn("Book could not be found.");
             res.status(404).send({message: `Book with id ${id} could not be found.`});
         } else {

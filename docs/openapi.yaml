@@ -14,22 +14,246 @@ info:
         url: "http://www.apache.org/licenses/LICENSE-2.0.html"
 tags:
     - name: user
-      description: User Operations
+      description: User Requests
     - name: book
-      description: Book Operations
+      description: Book Requests
+    - name: borrowed
+      description: Borrowed Relation Requests
 paths:
-    /user:
-      get:
+    /borrowed:
+      post:
         tags:
-          - user
-        summary: gets user information
+          - borrowed
+        summary: creates entry to borrow book
         parameters:
           - in: header
+            name: userId
+            required: true
+            schema:
+              type: string
+          - in: header
+            name: bookId
+            required: true
+            schema:
+              type: string
+          - in: header
+            name: startDate
+            required: true
+            schema:
+              type: string
+              format: date
+          - in: header
+            name: endDate
+            required: true
+            schema:
+              type: string
+              format: date
+        responses:
+          "200":
+            description: Borrowed Entry was created
+          "400":
+            description: Bad Request
+
+    /borrowed/{userId}:
+      get:
+        tags:
+          - borrowed
+        summary: shows list of currently borrowed books
+        parameters:
+          - in: path
+            name: userId
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: user was found
+            content:
+              application/json:
+                schema:
+                  type: array
+                  $ref: "#/components/schemas/borrowedList"
+          "400":
+            description: Bad Request
+          "404":
+            description: user was not found
+    /borrowed/{id}:
+      put:
+        tags:
+          - borrowed
+        summary: updates borrowed entry
+        parameters:
+          - in: path
+            name: id
+            required: true
+            schema:
+              type: string
+          - in: header
+            name: endDate
+            required: false
+            schema:
+              type: string
+          - in: header
+            name: progress
+            required: false
+            schema:
+              type: object
+        responses:
+          "200":
+            description: entry was updated
+            content:
+              application/json:
+                schema:
+                  type: object
+                  $ref: "#/components/schemas/borrowed"
+          "400":
+            description: Bad Request
+          "404":
+            description: entry was not found
+    /borrowed/borrowedBookInfo/{userId}/{bookId}:
+      get:
+        tags:
+          - borrowed
+        summary: shows information of selected borrowed book
+        parameters:
+          - in: path
+            name: userId
+            required: true
+            schema:
+              type: string
+          - in: path
+            name: bookId
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: borrowed book was found
+            content:
+              application/json:
+                schema:
+                  type: object
+                  $ref: "#/components/schemas/borrowed"
+          "400":
+            description: Bad Request
+          "404":
+            description: borrowed book was not found
+    /borrowed/borrowedBookInfo/{id}:
+      get:
+        tags:
+          - borrowed
+        summary: shows information of selected borrowed book
+        parameters:
+          - in: path
+            name: id
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: borrowed book was found
+            content:
+              application/json:
+                schema:
+                  type: object
+                  $ref: "#/components/schemas/borrowed"
+          "400":
+            description: Bad Request
+          "404":
+            description: borrowed book was not found
+    /borrowed/borrowedBookIds/{userId}:
+      get:
+        tags:
+          - borrowed
+        summary: gets list of bookIds user has currently borrowed
+        parameters:
+          - in: path
+            name: userId
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: entries were found
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                    type: string
+                    example: "e6804esver6048v"
+
+          "400":
+            description: Bad Request
+          "404":
+            description: user was not found
+    /user:
+      post:
+        tags:
+          - user
+        summary: create user
+        parameters:
+          - in: header   
             name: userName
             required: true
             schema:
               type: string
           - in: header
+            name: email
+            required: true
+            schema:
+              type: string
+              format: email
+          - in: header
+            name: dateOfBirth
+            required: true
+            schema:
+              type: string
+              format: date
+          - in: header
+            name: country
+            required: true
+            schema:
+              type: string
+          - in: header
+            name: paymentmethodId
+            required: true
+            schema:
+              type: string
+          - in: header
+            name: subModelId
+            required: true
+            schema:
+              type: string
+          - in: header
+            name: pswd
+            required: true
+            schema:
+              type: string
+              format: password
+        responses:
+            '200':
+                description: OK
+                content:
+                  application/json:
+                    schema:
+                      type: object
+                      $ref: "#/components/schemas/user"
+            "400":
+              description: Bad Request
+          
+    /user/{email}/{pswd}:
+      get:
+        tags:
+          - user
+        summary: gets user information
+        parameters:
+          - in: path
+            name: email
+            required: true
+            schema:
+              type: string
+          - in: path
             name: pswd
             required: true
             schema:
@@ -46,90 +270,64 @@ paths:
             description: Bad Request
           "404":
             description: user was not found
-      post:
+    /user/{email}:
+      get:
         tags:
           - user
-        summary: updates user information
+        summary: gets user information
         parameters:
-          - in: header   
-            name: userName
-            required: true
-            schema:
-              type: string
-          - in: header
+          - in: path
             name: email
             required: true
             schema:
               type: string
-              format: email
-          - in: header
-            name: dateOfBirth
-            required: true
-            schema:
-              type: string
-              format: date
-          - in: header
-            name: country
-            required: true
-            schema:
-              type: string
-          - in: header
-            name: paymentmethodID
-            required: true
-            schema:
-              type: integer
-          - in: header
-            name: subModelID
-            required: true
-            schema:
-              type: integer
-          - in: header
-            name: pswd
-            required: true
-            schema:
-              type: string
-              format: password
         responses:
-            '200':
-                description: OK
-                content:
-                  application/json:
-                    schema:
-                      type: object
-                      $ref: "#/components/schemas/user"
-            "400":
-              description: Bad Request
-            "404":
-              description: User not found
-          
-    /user/{userID}:
-      delete:
+          "200":
+            description: user was found
+            content:
+              application/json:
+                schema:
+                  type: object
+                  $ref: "#/components/schemas/user"
+          "400":
+            description: Bad Request
+          "404":
+            description: user was not found
+      
+    /user/{userId}:
+      get:
         tags:
           - user
-        summary: delete user
+        summary: gets user information
         parameters:
-          - in: query
-            name: userID
+          - in: path
+            name: userId
             required: true
             schema:
-                type: string
+              type: string
         responses:
-            "200":
-                description: user was deleted
-            "400":
-              description: Bad Request
-            "404":
-                description: user was not found
+          "200":
+            description: user was found
+            content:
+              application/json:
+                schema:
+                  type: object
+                  $ref: "#/components/schemas/user"
+          "400":
+            description: Bad Request
+          "404":
+            description: user was not found
+
       put:
         tags:
           - user
         summary: updates user information
         parameters:
-          - in: header   
-            name: userID
+          - in: path   
+            name: userId
             required: true
             schema:
-              type: integer
+              type: string
           - in: header   
             name: userName
             required: false
@@ -153,15 +351,15 @@ paths:
             schema:
               type: string
           - in: header
-            name: paymentmethodID
+            name: paymentmethodId
             required: false
             schema:
-              type: integer
+              type: string
           - in: header
-            name: subModelID
+            name: subModelId
             required: false
             schema:
-              type: integer
+              type: string
           - in: header
             name: pswd
             required: false
@@ -180,174 +378,6 @@ paths:
               description: Bad Request
             "404":
               description: User not found
-    /user/{userID}/library:
-      get:
-        tags:
-          - user
-        summary: shows list of currently borrowed books
-        parameters:
-          - in: path
-            name: userID
-            required: true
-            schema:
-              type: integer
-        responses:
-          "200":
-            description: user was found
-            content:
-              application/json:
-                schema:
-                  type: array
-                  $ref: "#/components/schemas/bookList"
-          "400":
-            description: Bad Request
-          "404":
-            description: user was not found
-    /user/{userID}/library/{bookID}:
-      get:
-        tags:
-          - user
-        summary: shows information of selected borrowed book
-        parameters:
-          - in: path
-            name: userID
-            required: true
-            schema:
-              type: integer
-          - in: path
-            name: bookID
-            required: true
-            schema:
-              type: integer
-        responses:
-          "200":
-            description: borrowed book was found
-            content:
-              application/json:
-                schema:
-                  type: object
-                  $ref: "#/components/schemas/book"
-          "400":
-            description: Bad Request
-          "404":
-            description: borrowed book was not found
-      post:
-        tags:
-          - user
-        summary: creates entry to borrow book
-        parameters:
-          - in: path
-            name: userID
-            required: true
-            schema:
-              type: integer
-          - in: path
-            name: bookID
-            required: true
-            schema:
-              type: integer
-        responses:
-          "200":
-            description: borrowed book was found
-          "400":
-            description: Bad Request
-          "404":
-            description: borrowed book was not found
-    /user/{userID}/genre:
-      get:
-        tags:
-          - user
-        summary: gets list of user interest in genres
-        parameters:
-          - in: path
-            name: userID
-            required: true
-            schema:
-              type: integer
-        responses:
-          "200":
-            description: user was found
-            content:
-              application/json:
-                schema:
-                  type: array
-                  $ref: "#/components/schemas/genreList"
-          "400":
-            description: Bad Request
-          "404":
-            description: user was not found
-    /user/{userID}/genre/{genreID}:
-      get:
-        tags:
-          - user
-        summary: shows specific genre user is interested in
-        parameters:
-          - in: path
-            name: userID
-            required: true
-            schema:
-              type: integer
-          - in: path
-            name: genreID
-            required: true
-            schema:
-              type: integer
-        responses:
-          "200":
-            description: genre was found
-            content:
-              application/json:
-                schema:
-                  type: object
-                  $ref: "#/components/schemas/genre"
-          "400":
-            description: Bad Request
-          "404":
-            description: borrowed book was not found
-      post:
-        tags:
-          - user
-        summary: creates new interest for user in specific genre
-        parameters:
-          - in: path
-            name: userID
-            required: true
-            schema:
-              type: integer
-          - in: path
-            name: genreID
-            required: true
-            schema:
-              type: integer
-        responses:
-          "200":
-            description: borrowed book was found
-          "400":
-            description: Bad Request
-          "404":
-            description: borrowed book was not found
-      delete:
-        tags:
-          - user
-        summary: deletes user interest in genre
-        parameters:
-          - in: path
-            name: userID
-            required: true
-            schema:
-              type: integer
-          - in: path
-            name: genreID
-            required: true
-            schema:
-              type: integer
-        responses:
-          "200":
-            description: user interest was deleted
-          "400":
-            description: Bad Request
-          "404":
-            description: user interest was not found
     /book:
       get:
         tags:
@@ -361,17 +391,17 @@ paths:
                 schema:
                   type: array
                   $ref: "#/components/schemas/bookList"
-    /book/{bookID}:
+    /book/{bookId}:
         get:
           tags:
             - book
           summary: gets book information
           parameters:
             - in: path
-              name: bookID
+              name: bookId
               required: true
               schema:
-                  type: integer
+                  type: string
           responses:
               "200":
                   description: book was found
@@ -408,19 +438,6 @@ paths:
                       schema:
                           type: array
                           $ref: "#/components/schemas/subModelList"
-    /genre:
-        get:
-          tags:
-            - genre
-          summary: gets list of genres
-          responses:
-              "200":
-                  description: Request was successful
-                  content:
-                    application/json:
-                      schema:
-                          type: array
-                          $ref: "#/components/schemas/genreList"
 components:
     schemas:
         user:
@@ -432,12 +449,12 @@ components:
             - pswd
             - userName
             - dateOfBirth
-            - paymentmethodID
+            - paymentmethodId
             - country
-            - subModelID
+            - subModelId
           properties:
             id:
-              type: integer
+              type: string
               example: 85469
             name:
               type: string
@@ -452,20 +469,62 @@ components:
               example: acd62bb6efabc81a
             userName:
               type: string
-              example: max_89
+              example: max7078_89
             dateOfBirth:
               type: string
               format: date
               example: "1989-11-11"
-            paymentMethodID:
-              type: integer
+            paymentMethodId:
+              type: string
               example: 26475
             country:
               type: string
               example: "DE"
-            subModelID:
-              type: integer
+            subModelId:
+              type: string
               example: 47586
+        borrowed:
+          type: object
+          required:
+            - "id"
+            - "userId"
+            - "bookId"
+            - "startDate"
+            - "endDate"
+            - "progress"
+          properties:
+            id:
+              type: string
+              example: "5604se6f0s8e4f"
+            userId:
+              type: string
+              example: "5s0df840s9f840"
+            bookId:
+              type: string
+              example: "490se9089409se0r9c40e"
+            startDate:
+              type: string
+              format: date
+              example: "2021-05-03"
+            endDate:
+              type: string
+              format: date
+              example: "2021-06-03"
+            progress:
+              type: object
+              example: {start: {}, end: {}}
+            book:
+              type: object
+              $ref: "#components/schemas/book"
+        borrowedList:
+          type: array
+          items:
+            $ref: "#/components/schemas/borrowed"
+            example:
+              Example1:
+                $ref: "#/components/schemas/borrowed"
+              Example2:
+                $ref: "#/components/schemas/borrowed"
         book:
           type: object
           required:
@@ -476,7 +535,7 @@ components:
             - content
           properties:
             id:
-              type: integer
+              type: string
               example: 59586
             title:
               type: string
@@ -512,15 +571,17 @@ components:
             example:
               Example1:
                 $ref: "#/components/schemas/book"
+              Example2:
+                $ref: "#/components/schemas/book"
 
         author:
           type: object
           required:
-            - authorID
+            - authorId
             - name
           properties:
-            authorID:
-              type: integer
+            authorId:
+              type: string
               example: 13451
             name:
               type: string
@@ -529,11 +590,11 @@ components:
         genre:
           type: object
           required:
-            - genreID
+            - genreId
             - name
           properties:
-            genreID:
-              type: integer
+            genreId:
+              type: string
               example: 19823
             name:
               type: string
@@ -545,16 +606,18 @@ components:
             example:
               Example1:
                 $ref: "#/components/schemas/genre"
+              Example2:
+                $ref: "#/components/schemas/genre"
 
               
         subModel:
           type: object
           required:
-            - subModelID
+            - subModelId
             - name
           properties:
-            subModelID:
-              type: integer
+            subModelId:
+              type: string
               example: 98231
             name:
               type: string
@@ -567,16 +630,18 @@ components:
             example:
               Example1:
                 $ref: "#/components/schemas/subModel"
+              Example2:
+                $ref: "#/components/schemas/subModel"
 
 
         paymentMethod:
           type: object
           required:
-            - paymentMethodID
+            - paymentMethodId
             - name
           properties:
-            paymentMethodID:
-              type: integer
+            paymentMethodId:
+              type: string
               example: 12345
             name:
               type: string
@@ -588,30 +653,5 @@ components:
             example:
               Example1:
                 $ref: "#/components/schemas/paymentMethod"
-            
-        borrowed:
-          required:
-            - id
-            - bookID
-            - userID
-            - startDate
-            - endDate
-            - progress
-          properties:
-            id:
-              type: integer
-            bookID:
-              type: integer
-            userID:
-              type: integer
-            startDate:
-              type: string
-              format: date
-              example: "2021-12-01"
-            endDate:
-              type: string
-              format: date
-              example: "2021-12-31"
-            progress:
-              type: number
-              example: 12.5
+              Example2:
+                $ref: "#/components/schemas/paymentMethod"

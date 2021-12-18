@@ -11,7 +11,12 @@ const User = require(reqPathUser);
 
 const { ObjectId } = require("mongoose").Types;
 
-// TODO JsDoc
+
+/**
+ * creates a new entry in database when user borrows a book
+ * @param {object} req - request body
+ * @param {object} res - response body, which is sent back to server
+ */
 exports.create = async (req, res) => {
     // validate request
     if(!req.body?.userId || !req.body?.bookId || !req.body?.startDate || !req.body?.endDate || (!req.body?.progress && req.body?.progress != 0)){
@@ -45,6 +50,12 @@ exports.create = async (req, res) => {
         });
 };
 
+/**
+ * retrieves every book from database, which is currently borrowed from user with userId
+ * @param {object} req - request body
+ * @param {object} res - reponse object
+ * @returns array of borrowed objects
+ */
 exports.findByUserId = (req, res) => {
     const userId = ObjectId(req.params.userId);
 
@@ -135,7 +146,7 @@ exports.findByUserId = (req, res) => {
         if(err) {
             logger.error("Request failed:", err);
             res.status(500).send({message: "Something went wrong with retrieving the borrowed entry."});
-        } else if(!data) {
+        } else if(data?.length === 0 || data === null) {
             logger.warn("Borrowed entry could not be found.");
             res.status(404).send({message: `Borrowed entry with id ${userId} could not be found.`});
         } else {
@@ -145,7 +156,11 @@ exports.findByUserId = (req, res) => {
     });
 };
 
-
+/**
+ * updates borrowed entry, if user extends or returns a book early 
+ * @param {object} req - request body
+ * @param {object} res - reponse object
+ */
 exports.update = (req, res) => {
     if(!req.body) {
         logger.error("Data to update was empty:", req.body);
@@ -182,7 +197,7 @@ exports.update = (req, res) => {
 
     Borrowed.findByIdAndUpdate(id, req.body, {useFindAndModify: false})
         .then((data) => {
-            if(!data) {
+            if(data?.length === 0 || data === null) {
                 logger.warn(`Could not update update entry with id: ${id}.`);
                 res.status(404).send({
                     message: `Cannot update borrowed entry with id: ${id}.`
@@ -203,6 +218,12 @@ exports.update = (req, res) => {
         });
 };
 
+/**
+ * gets id of every book a user has currently borrowed
+ * @param {object} req - request body
+ * @param {object} res - response object
+ * @returns array of strings
+ */
 exports.borrowedBookIds = (req, res) => {
     const userId = ObjectId(req.params.userId);
     
@@ -239,7 +260,7 @@ exports.borrowedBookIds = (req, res) => {
         if(err) {
             logger.error("Request failed:", err);
             res.status(500).send({message: "Something went wrong with retrieving the borrowed book ids."});
-        } else if(!data) {
+        } else if(data?.length === 0 || data === null) {
             logger.warn("No books are currently borrowed");
             res.status(404).send({message: "User has not any books borrowed"});
         } else {
@@ -249,6 +270,13 @@ exports.borrowedBookIds = (req, res) => {
     });
 };
 
+
+/**
+ * gets information of a specific book which is currently borrowed, using userId and bookId
+ * @param {object} req - request body
+ * @param {object} res - response object
+ * @returns book object
+ */
 exports.borrowedBookInfo = (req, res) => {
     const userId = ObjectId(req.params.userId);
     const bookId = ObjectId(req.params.bookId);
@@ -329,7 +357,7 @@ exports.borrowedBookInfo = (req, res) => {
         if(err) {
             logger.error("Request failed:", err);
             res.status(500).send({message: "Something went wrong with retrieving the borrowed book info."});
-        } else if(!data) {
+        } else if(data?.length === 0 || data === null) {
             logger.warn("This book has not been currently borrowed by this user.");
             res.status(404).send({message: "This book has not been currently borrowed by this user."});
         } else {
@@ -339,6 +367,12 @@ exports.borrowedBookInfo = (req, res) => {
     });
 };
 
+/**
+ * gets information of borrowed book using entryId
+ * @param {object} req - request body
+ * @param {object} res - response object
+ * @returns book object
+ */
 exports.borrowedBookInfoByEntryId = (req, res) => {
     const id = ObjectId(req.params.id);
     
@@ -417,7 +451,7 @@ exports.borrowedBookInfoByEntryId = (req, res) => {
         if(err) {
             logger.error("Request failed:", err);
             res.status(500).send({message: "Something went wrong with retrieving the borrowed book info."});
-        } else if(!data) {
+        } else if(data?.length === 0 || data === null) {
             logger.warn("This book has not been currently borrowed by this user.");
             res.status(404).send({message: "This book has not been currently borrowed by this user."});
         } else {

@@ -6,7 +6,11 @@ const { logger } = require("../../config/logger");
 
 const UserGenre = require(reqPath);
 
-// TODO JsDoc
+/**
+ * function to create a new userGenre
+ * @param {object} req - request body
+ * @param {object} res - response which is sent back to server
+ */
 exports.create = (req, res) => {
     // validate request
     if(!req.body?.userId || !req.body?.genreId){
@@ -35,6 +39,12 @@ exports.create = (req, res) => {
         });
 };
 
+/**
+ * retrieves one userGenre from database, finds user by id
+ * @param {object} req -  request body
+ * @param {object} res - response body
+ * @returns userGenre object
+ */
 exports.findByUserId = (req, res) => {
     const userId = req.params.userId;
 
@@ -57,12 +67,17 @@ exports.findByUserId = (req, res) => {
     });
 };
 
+/**
+ * function to delete a userGenre by id
+ * @param {object} req - request body
+ * @param {object} res - response which is sent back to server
+ */
 exports.delete = (req, res) => {
     const id = req.params.id;
 
     UserGenre.findByIdAndRemove(id)
         .then((data) => {
-            if(!data) {
+            if(data?.length === 0 || data === null) {
                 logger.warn(`Cannot delete userGenre entry with id: ${id}.`);
                 res.status(404).send({
                     message: `Cannot delete userGenre entry with id: ${id}.`

@@ -31,6 +31,7 @@ const userSchema = new Schema({
     },
     country: {
         type: String,
+        required: [true, "Country must not be empty."],
         minLength: [2, "Country must be longer than 4 character"]
     },
     subModelId: {

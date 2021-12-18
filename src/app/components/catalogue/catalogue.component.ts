@@ -21,7 +21,6 @@ export class CatalogueComponent implements OnInit {
         this.bookService.getBooks().subscribe(
             (res) => {
                 this.books = res;
-                console.log(this.books);
 
                 this.borrowedService.getBorrowedBookIds().subscribe(
                     (res) => {
@@ -32,9 +31,6 @@ export class CatalogueComponent implements OnInit {
                         });
                         
                         this.gotResponse = true;
-                        console.log(this.books);
-                        
-                        
                     },
                     (err) => {
                         console.error(err);
@@ -47,9 +43,4 @@ export class CatalogueComponent implements OnInit {
             }
         );
     }
-
-    getBooks(){
-        
-    }
-
 }

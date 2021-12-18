@@ -1,7 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 
-// TODO navbar on hover icons darstellen
-
 @Component({
     selector: "app-navbar",
     templateUrl: "./navbar.component.html",

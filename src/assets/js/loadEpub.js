@@ -26,6 +26,10 @@ var rendition = book.renderTo("viewer", {
 
 rendition.display(currentSectionIndex?.start?.cfi || undefined);
 
+
+// locationObject = new Locations(book);
+
+
 book.ready.then(() => {
     var next = document.getElementById("next");
 

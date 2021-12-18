@@ -33,7 +33,7 @@ export class UserService {
             let userExists = true;
 
             await this.http.get<boolean>(`api/user/email/${user.email}`).toPromise()
-                .then((data) => {
+                .then(() => {
                     userExists = true;
                 })
                 .catch((err) => {

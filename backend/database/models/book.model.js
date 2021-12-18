@@ -11,7 +11,7 @@ const bookSchema = new Schema({
     pageCount: Number,
     ISBN13: {
         type:  Number,
-        required: [true, "ISBN must not be empty"],
+        required: [false, "ISBN must not be empty"],
         minlength: 13,
         maxlength: 13,
     },

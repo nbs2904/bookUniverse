@@ -34,8 +34,7 @@ export class ReaderComponent implements OnInit, OnDestroy {
 
     constructor(private route: ActivatedRoute, private borrowedService: BorrowedService, private router: Router) { }
 
-    ngOnInit() { 
-        // TODO upate backend model files
+    ngOnInit() {
         this.route.params.subscribe((params) => {
             this.borrowedEntry._id = params["borrowedId"];
 

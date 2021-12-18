@@ -1,9 +1,9 @@
 const chai = require("chai");
 const chaiHttp = require("chai-http");
-const should = chai.should();
 
 const server = require("../backend/app");
 
+chai.should();
 chai.use(chaiHttp);
 
 describe("Payment Method Controller", () => {

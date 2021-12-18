@@ -12,10 +12,7 @@ import dateFormat from "dateformat";
     styleUrls: ["./libraryInfo.component.scss"]
 })
 export class LibraryInfoComponent implements OnInit {
-    // TODO Impressum
-    // TODO Sharen des Image Folders beenden
     // TODO allgemeine warnings und errors in console prüfen
-    // TODO progress Darstellung fixen
 
     borrowedEntry: Borrowed = {
         _id: "",
@@ -42,11 +39,7 @@ export class LibraryInfoComponent implements OnInit {
 
             this.borrowedService.getBorrowedBookInfo(this.borrowedEntry.book._id).subscribe(
                 (res) => {
-                    console.log(res);
                     this.borrowedEntry = res;
-
-                    console.log(this.borrowedEntry.progress);
-                    
 
                     this.borrowedEntry.startDateFormatted = dateFormat(this.borrowedEntry.startDate, "dd.mm.yyyy");
                     this.borrowedEntry.endDateFormatted = dateFormat(this.borrowedEntry.endDate, "dd.mm.yyyy");
@@ -65,7 +58,7 @@ export class LibraryInfoComponent implements OnInit {
         newEndDate.setDate(newEndDate.getDate() + 14);
         
         this.borrowedService.updateBorrowedEntry(this.borrowedEntry._id, newEndDate).subscribe(
-            (res) => {
+            () => {
                 alert("Duration was extended for 2 weeks.");
 
                 this.borrowedEntry.endDate = dateFormat(newEndDate, "UTC:yyyy-mm-dd'T'HH:MM:ss'Z'");
@@ -83,7 +76,7 @@ export class LibraryInfoComponent implements OnInit {
         newEndDate.setDate(newEndDate.getDate() - 1);
 
         this.borrowedService.updateBorrowedEntry(this.borrowedEntry._id, newEndDate).subscribe(
-            (res) => {
+            () => {
                 alert("Book was returned.");
                 this.router.navigateByUrl("/library");
             },

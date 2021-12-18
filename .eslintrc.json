@@ -2,7 +2,7 @@
     "env": {
         "node": true,
         "commonjs": true,
-        "es2021": true,
+        // "es2021": true,
         "mocha": true
     },
     "extends": [
@@ -19,6 +19,9 @@
     "overrides": [{
         "files": ["backend/**/*.js"]
     }],
+    "ignorePatterns": [
+        "/dist/**/*.js"
+    ],
     "rules": {
         "indent": [
             "error",
@@ -37,6 +40,7 @@
             "always"
         ],
         "@typescript-eslint/no-var-requires": "off",
-        "@typescript-eslint/no-empty-function": "off"
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-explicit-any": "off"
     }
 }

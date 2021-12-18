@@ -5,7 +5,6 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 
 // TODO anzahl limitieren, die ausgeliehen werden kann
-// TODO delete unzip folder
 
 @Component({
     selector: "app-bookInfo",
@@ -28,24 +27,25 @@ export class BookInfoComponent implements OnInit {
     constructor(private route: ActivatedRoute, private bookService: BookService, private http: HttpClient, private router: Router) { }
 
     ngOnInit() {
+        // oninit retrieve book infos by id
         this.route.params.subscribe((params) => {
             this.book._id = params["bookId"];
 
             this.bookService.getBookDetails(this.book._id).subscribe(
                 (res) => {
-                    console.log(res);
                     this.book = res;                    
                 },
                 (err) => {
-                    console.log(err);
+                    console.error(err);
                     this.router.navigateByUrl("/catalogue");
                 }
             );
         });
     }
 
+    // borrows book after user clicked "borrow" button
     borrowBook(){
-        // ?  set endDate two weeks after startDate
+        // ?  sets endDate two weeks after startDate
         const newEntry = {
             userId: localStorage.getItem("userId"),
             bookId: this.book._id,
@@ -55,8 +55,7 @@ export class BookInfoComponent implements OnInit {
         };    
         
         this.http.post<any>("api/borrowed", newEntry).toPromise()
-            .then((res) => {
-                console.log(res);
+            .then(() => {
                 this.router.navigateByUrl("/library");
             
             })

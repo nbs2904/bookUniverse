@@ -6,7 +6,12 @@ const { logger } = require("../../config/logger");
 
 const Genre = require(reqPath);
 
-// TODO JsDoc
+/**
+ * function to create a new genre (only used in development stage)
+ * @param {object} req - request body
+ * @param {object} res - response which is sent back to server
+ * @returns 
+ */
 exports.create = (req, res) => {
     // validate request
     if(!req.body?.name){
@@ -33,7 +38,12 @@ exports.create = (req, res) => {
             });
         });
 };
-
+/**
+ * function to get retrieve every genre from database
+ * @param {object} req - request body
+ * @param {object} res - response which is sent back to server
+ * @return array of genre objects
+ */
 exports.findAll = (req, res) => {
     Genre.find({}, (err, genres) => {
         if(err){

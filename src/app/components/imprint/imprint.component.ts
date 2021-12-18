@@ -1,7 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 
-// TODO imprint on hover icons darstellen
-
 @Component({
     selector: "app-imprint",
     templateUrl: "./imprint.component.html",

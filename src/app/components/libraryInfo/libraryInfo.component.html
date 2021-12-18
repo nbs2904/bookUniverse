@@ -2,9 +2,9 @@
 
 <div class="container mt-5">
     <div class="row">
-        <button class="btn btn-secondary" type="submit" (click)="extend()">Extend Duration</button>
-        <button class="btn btn-secondary" type="submit" (click)="returnBook()">Return Book</button>
-        <button class="btn btn-secondary" type="submit" (click)="readBook()">{{ borrowedEntry.progress == 0 ? "Start Reading" : "Continue Reading" }}</button>
+        <button class="btn btn-secondary mb-2" type="submit" (click)="extend()">Extend Duration</button>
+        <button class="btn btn-secondary mb-2" type="submit" (click)="returnBook()">Return Book</button>
+        <button class="btn btn-secondary mb-2" type="submit" (click)="readBook()">{{ borrowedEntry.progress == 0 ? "Start Reading" : "Continue Reading" }}</button>
     </div>
     <br>
     <div class="row row-cols-2">
@@ -19,8 +19,6 @@
                 <p *ngFor="let author of borrowedEntry.book.authors">{{ author }}</p>
             </ng-container>
             <p>Borrowed from {{ borrowedEntry.startDateFormatted }} until {{ borrowedEntry.endDateFormatted }}</p>
-            <p>Progress: {{ borrowedEntry.progress }}</p>
-
         </div>
     </div>
 </div>

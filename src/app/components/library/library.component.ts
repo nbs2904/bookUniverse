@@ -20,8 +20,6 @@ export class LibraryComponent implements OnInit {
             (res) => {
                 this.borrowedBooks = res;
                 this.gotResponse = true;
-                console.log(this.borrowedBooks);
-                
             },
             (err) => {
                 this.gotResponse = true;

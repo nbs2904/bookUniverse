@@ -78,7 +78,7 @@ export class ProfileComponent implements OnInit {
     updateUser(){
         if(this.user.pswd == this.user.pswdRepeat) {
             ((this.userService.updateUser(this.user))).subscribe(
-                (res) => {
+                () => {
                     alert("Profile was successfully updated.");
                 },
                 (err) => {
