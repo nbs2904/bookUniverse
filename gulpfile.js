@@ -4,6 +4,10 @@ const run = require("gulp-run-command").default;
 const eslint = require("gulp-eslint");
 const mocha = require("gulp-mocha");
 
+// TODO remove comment
+// TODO make taskes dependent on each other
+// TODO add e2e task to readme.md
+
 gulp.task("lint", () => {
     return gulp.src(["**/*.js", "**/*.ts","!**/node_modules/**", "!/express/**"])
         .pipe(eslint({ configFile: "./.eslintrc.json", fix: true }))

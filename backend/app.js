@@ -1,9 +1,8 @@
 require("dotenv").config({path: __dirname+"/.env"});
 const path = require("path");
 
-// TODO check if every npm package is needed
-// TODO check if npm scripts can be optimised
 // TODO check on different machine
+// TODO add .env file in submission or mention in read me
 
 require("./database/db.config");
 
@@ -15,7 +14,7 @@ const app = express();
 
 // get environment variables
 const PORT = process.env.PORT;
-const ENV = process.env.NODE_ENV;
+const ENV = process.env.NODE_ENV || "development";
 
 // middleware
 app.use(express.json());

@@ -1,0 +1,21 @@
+@startuml Process View - User SignUp
+(*) --> "user opens signup page"
+--> "user fills input fields with (correct) data" as dataInput
+--> "user submits form"
+if "data is valid?" then
+    -down->[true] "request is sent to server"
+    if "submitted data is valid? (server side check)" then
+        -down-> [true] "data is saved in database"
+        --> "userId is sent back to client"
+        --> "localStorage is set"
+        --> "user is logged in"
+        --> (*)
+    else
+        -up-> [false] dataInput
+    endif
+else
+    -up->[false] dataInput
+endif
+
+
+@enduml

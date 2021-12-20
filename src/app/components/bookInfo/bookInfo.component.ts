@@ -4,8 +4,6 @@ import { BookService } from "./../../services/book.service";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 
-// TODO anzahl limitieren, die ausgeliehen werden kann
-
 @Component({
     selector: "app-bookInfo",
     templateUrl: "./bookInfo.component.html",

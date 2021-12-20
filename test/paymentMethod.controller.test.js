@@ -37,9 +37,7 @@ describe("Payment Method Controller", () => {
                 res.should.have.status(404);
                 done();
             });
-    });
-
-    
+    });    
 
     after (async () => {
         server.stop();

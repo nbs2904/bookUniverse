@@ -8,5 +8,4 @@ module.exports = (app) => {
     router.get("/:id", book.findById);
 
     app.use("/api/book", router);
-
 };

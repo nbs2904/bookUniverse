@@ -1,0 +1,28 @@
+@startuml Process View - Borrow Book
+(*) --> "user opens catalogue"
+--> "user is shown the catalogue" as catalogue
+--> "user clicks on a book \n and is shown the details"
+if "user wants to borrow the book" then
+    -down->[true] "user borrows the book,\nwhich is saved in the database as borrowed"
+    --> "user is redirected to library" as library
+    --> "user clicks on borrowed book"
+    --> "user gets redirected to detail view" as libraryInfo
+    if "user clicks on extend button" then
+        --> [true] "time duration is extended in the database"
+        --> libraryInfo
+    else
+        if "user clicks on return button" then
+            --> [true] "book is returned"
+            --> library
+        else
+            if "user clicks on read button" then
+                --> [true] "user is redirected to reader view"
+                --> (*)
+            endif
+        endif
+    endif
+else
+    -up->[false] catalogue
+endif
+
+@enduml
