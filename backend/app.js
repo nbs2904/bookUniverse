@@ -1,9 +1,6 @@
 require("dotenv").config({path: __dirname+"/.env"});
 const path = require("path");
 
-// TODO check on different machine
-// TODO add .env file in submission or mention in read me
-
 require("./database/db.config");
 
 // import custom logger

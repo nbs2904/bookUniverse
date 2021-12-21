@@ -12,8 +12,6 @@ import dateFormat from "dateformat";
     styleUrls: ["./libraryInfo.component.scss"]
 })
 export class LibraryInfoComponent implements OnInit {
-    // TODO allgemeine warnings und errors in console prüfen
-
     borrowedEntry: Borrowed = {
         _id: "",
         startDate: "",

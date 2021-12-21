@@ -16,7 +16,6 @@ export class CatalogueComponent implements OnInit {
     gotResponse = false;
 
     constructor(private router: Router, private bookService: BookService, private borrowedService: BorrowedService) { }
-    // TODO entferne unnötiges logging
     ngOnInit() {
         this.bookService.getBooks().subscribe(
             (res) => {
